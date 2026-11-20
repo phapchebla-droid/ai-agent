@@ -51,7 +51,8 @@ Thư mục phòng ban (con của `01. Bản soạn thảo`):
 |---|---|---|
 | Địa điểm = BLA Hồ Chí Minh (ưu tiên hơn phòng ban) | Chi nhánh HCM | `15PNi5pKB8kqcDUyJ6UsWMGxnY9DFqqsm` |
 | Địa điểm = BLA Đà Nẵng | Chi nhánh Đà Nẵng (chưa có → tạo mới trong `01. Bản soạn thảo`, rồi ghi ID vào đây) | — |
-| Phòng Đào tạo | Phòng Đào tạo | `14dYQxruL3N7ACLcVGXy2b9VefTWYyQj2` |
+| Phòng Đào tạo (toàn thời gian – HĐTV) | Phòng Đào tạo | `14dYQxruL3N7ACLcVGXy2b9VefTWYyQj2` |
+| Phòng Đào tạo (bán thời gian / online – HĐDV) | Phòng Đào tạo › `00A. Part time` | `1jyPBcXA4oWh_Yc2-PToYjPaNSwSaNakz` |
 | Phòng HCNS | Phòng HCNS | `1rClozZWZONjtSVPh_b_PaHbGrJtSHP4Z` |
 | Phòng HTQT | Phòng HTQT | `17BeD7GoEce14aHN5PnRtKjtDCmYTkOdE` |
 | Trợ lý BLĐ | Trợ lý BLĐ | `1QnSj4O0gC4D3gCdUrhHDxV6bDMHePC-P` |
@@ -67,7 +68,7 @@ Thư mục phòng ban (con của `01. Bản soạn thảo`):
 
 | Bước | Cách làm |
 |---|---|
-| Bộ hồ sơ | **HĐDV giảng dạy + CKBM** (mẫu BLA Academy). Tên file `HĐDV - [Họ tên]`, `CKBM - [Họ tên]`; thư mục `[Họ và tên] - [Vị trí]` trong **Phòng Đào tạo** |
+| Bộ hồ sơ | **HĐDV giảng dạy + CKBM** (mẫu BLA Academy). Tên file `HĐDV - [Họ tên]`, `CKBM - [Họ tên]`; thư mục `[Họ và tên] - [Vị trí]` trong **`00A. Part time`** (`1jyPBcXA4oWh_Yc2-PToYjPaNSwSaNakz`, nằm trong thư mục Phòng Đào tạo) – người dùng chốt 20/11/2026 |
 | Mẫu HĐDV | `Mẫu HĐ dịch vụ giảng dạy (trống)` – Google Doc `1Mcb9VgDFyyORuftx-IBB9Yy9XkNJHZwC90PyH7ogZ4Q` (thư mục `00. Mẫu BLA Academy`). Là Google Doc nên dùng `copy_file` thẳng vào thư mục nhân sự, không cần tải về. **Không dùng** file `Mẫu HĐ dịch vụ giảng dạy` cũ (`1Q4LdZs2…`, có dữ liệu thật của một giáo viên) |
 | Chỗ trống HĐDV | `Số: ddmmyy-HĐDV/BLA-mã NV` (ddmmyy = ngày bắt đầu, mã NV = phần số) · "Hôm nay, ngày … tháng … năm 2026" = ngày bắt đầu · `Ông/Bà ……` = "Ông"/"Bà" + họ tên · Sinh ngày · CCCD: **số để trống**, điền Ngày cấp, Nơi cấp · Nơi ĐKHK thường trú · Nơi ở hiện tại · Điện thoại · Email · Tài khoản ngân hàng: **để trống** · 2.1 Thời hạn: **12 tháng**, từ ngày bắt đầu đến hết ngày (bắt đầu + 12 tháng − 1 ngày) · 3.1 Mức phí `……… VND/01 giờ` = mức phí/giờ |
 | Mức phí/giờ | Lấy từ cột `Mức lương chính thức` của Form (NLĐ ghi tự do: "250k", "250.000đ/giờ"…) → quy về số, viết `250,000` như mẫu. Mức thường gặp: **200,000 / 250,000 / 350,000**. Không đọc được hoặc khác 3 mức này → vẫn điền theo Form nhưng **ghi cảnh báo** Todolist. Không áp dụng kiểm tra 85% và lương BH |
