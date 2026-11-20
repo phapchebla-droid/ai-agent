@@ -174,6 +174,11 @@ Todolist: `[1.2] Đã gửi TB review [sau thử việc | tái ký] – [Họ t�
 | HRM – Tạo mới HĐ | Như SOP 1.1 mục 3a: Mã HĐ = số HĐDV mới · Ngày ký = Ngày bắt đầu · `Chờ ký / Chờ duyệt` · Loại `Chính thức` · Thời hạn: chọn `1/2/12/24/36` tháng nếu trùng N, không trùng → chọn giá trị gần nhất rồi **sửa tay Ngày kết thúc** cho đúng, ghi rõ ở Ghi chú · Link scan = Google Doc · Ô ẩn: `salary_basic` = `salary_official` = phí/giờ, các ô còn lại 0 · Ghi chú "AI tạo tự động (luồng 1.2 – tái ký HĐDV). Phí …/giờ. Thời hạn theo review PC: … Thư mục: <link>" |
 | Sheet & Todolist | AA = link thư mục, Z = `3. AI đã làm HĐ – chờ kiểm tra`. Todolist: `[1.2 – HĐDV] Tái ký HĐDV – [Họ tên] – Mã NV – [bắt đầu]–[kết thúc] – phí …/giờ – [link]` + "HCNS điền số CCCD, STK" |
 
+**Ghi chú kỹ thuật (chạy thử 3, 20/11/2026):**
+- Thư mục: ưu tiên thư mục chứa **HĐDV cũ** của nhân sự (link scan trên HĐ điện tử HĐDV cũ → lấy thư mục cha); không có mới dùng `[Họ và tên] - [Vị trí]` trong Phòng Đào tạo.
+- Mẫu HĐDV là đoạn văn thường (trừ ô Tài khoản ngân hàng – để trống): `replaceAllText` regex `Nhãn: …+` chạy được cho Bên B, Sinh ngày, Ngày cấp, Nơi cấp, Thường trú, Nơi ở, Điện thoại, Email, mức phí. **"Hôm nay, ngày … tháng … năm 2026" và "2.1 … từ ngày …… đến hết ngày ……" KHÔNG khớp** (kể cả khớp nguyên văn) → sửa theo vị trí: đọc `read_doc`, tìm đoạn bằng PowerShell, `deleteContentRange` + `insertText` từ index lớn về nhỏ. Luôn đọc lại bằng `read_file_content` để kiểm tra.
+- HRM: chọn "2 tháng" (gần 6 nhất) → HRM tự tính ngày kết thúc 2 tháng → sau đó gán lại `end_date` đúng; kiểm tra lại trên danh sách HĐ: lưu đúng ngày sửa tay.
+
 ## 6b. Không tái ký → Thông báo chấm dứt HĐLĐ do hết hạn
 1. Nhân bản mẫu TB (mục 0) vào thư mục của nhân sự trong `01. Bản soạn thảo` (chưa có thì tạo `[Họ và tên] - [Vị trí]` trong thư mục phòng ban). Tên file: `TB chấm dứt HĐLĐ do hết hạn - [Họ tên]`.
 2. Thay các chỗ sau, **giữ nguyên lời văn còn lại**:
