@@ -41,7 +41,8 @@ Vị trí ghi mơ hồ (VD "Quản lý", "Leader") → dùng 5.400.000 và ghi c
 
 | Điều kiện | Pháp nhân | Mẫu HĐTV | Mẫu CKBM |
 |---|---|---|---|
-| Phòng Đào tạo | BLA Academy | `1zWBqnxQf1nAlSBFofi2ojDtWbJTVTH-2` (HĐ thử việc.docx) | `1uow5meNqJ0-VeXpCXu9cOJE96p33afGO` |
+| Phòng Đào tạo + **Toàn thời gian** (không Online) | BLA Academy | `1zWBqnxQf1nAlSBFofi2ojDtWbJTVTH-2` (HĐ thử việc.docx) | `1uow5meNqJ0-VeXpCXu9cOJE96p33afGO` |
+| Phòng Đào tạo + **Bán thời gian** hoặc Địa điểm **Làm việc Online** | BLA Academy | **HĐ dịch vụ giảng dạy** – xem mục 3a (thay cho HĐTV) | `1uow5meNqJ0-VeXpCXu9cOJE96p33afGO` |
 | Phòng khác | BLA | `1nJ5NWT3vXYm9bQZnGF1X4Yjek8lsg8Xi` (01. Mẫu HĐ thử việc.docx) | `1YkqevTfO8XUh0usDDaIJO4sjwRfPlXct` |
 
 Thư mục phòng ban (con của `01. Bản soạn thảo`):
@@ -59,6 +60,22 @@ Thư mục phòng ban (con của `01. Bản soạn thảo`):
 | Phòng Marketing & TT | Phòng MKT&TT | `1WqPPc17F3WEXMh6u4XNo2imJYQ6nI6bf` |
 | Phòng Công tác học viên | Phòng CTHV | `1Sscq4pIymQBrZUqofUZHJ1iMWB1tvi5f` |
 | BLA Tech | BLA Tech | `1C8eg1wEZ0uISJSmM9fNKMVlI4YJ0mee5` |
+
+## 3a. Nhánh HĐ DỊCH VỤ GIẢNG DẠY (người dùng chốt 20/11/2026)
+
+**Áp dụng khi**: `Thuộc phòng ban` = Phòng Đào tạo **và** (`Hình thức làm việc` = Bán thời gian **hoặc** `Địa điểm làm việc` = Làm việc Online). Phòng Đào tạo toàn thời gian vẫn ký HĐ thử việc như cũ.
+
+| Bước | Cách làm |
+|---|---|
+| Bộ hồ sơ | **HĐDV giảng dạy + CKBM** (mẫu BLA Academy). Tên file `HĐDV - [Họ tên]`, `CKBM - [Họ tên]`; thư mục `[Họ và tên] - [Vị trí]` trong **Phòng Đào tạo** |
+| Mẫu HĐDV | `Mẫu HĐ dịch vụ giảng dạy (trống)` – Google Doc `1Mcb9VgDFyyORuftx-IBB9Yy9XkNJHZwC90PyH7ogZ4Q` (thư mục `00. Mẫu BLA Academy`). Là Google Doc nên dùng `copy_file` thẳng vào thư mục nhân sự, không cần tải về. **Không dùng** file `Mẫu HĐ dịch vụ giảng dạy` cũ (`1Q4LdZs2…`, có dữ liệu thật của một giáo viên) |
+| Chỗ trống HĐDV | `Số: ddmmyy-HĐDV/BLA-mã NV` (ddmmyy = ngày bắt đầu, mã NV = phần số) · "Hôm nay, ngày … tháng … năm 2026" = ngày bắt đầu · `Ông/Bà ……` = "Ông"/"Bà" + họ tên · Sinh ngày · CCCD: **số để trống**, điền Ngày cấp, Nơi cấp · Nơi ĐKHK thường trú · Nơi ở hiện tại · Điện thoại · Email · Tài khoản ngân hàng: **để trống** · 2.1 Thời hạn: **12 tháng**, từ ngày bắt đầu đến hết ngày (bắt đầu + 12 tháng − 1 ngày) · 3.1 Mức phí `……… VND/01 giờ` = mức phí/giờ |
+| Mức phí/giờ | Lấy từ cột `Mức lương chính thức` của Form (NLĐ ghi tự do: "250k", "250.000đ/giờ"…) → quy về số, viết `250,000` như mẫu. Mức thường gặp: **200,000 / 250,000 / 350,000**. Không đọc được hoặc khác 3 mức này → vẫn điền theo Form nhưng **ghi cảnh báo** Todolist. Không áp dụng kiểm tra 85% và lương BH |
+| CKBM | Như nhánh HĐTV (mẫu Academy), số `ddmmyy-CCBM/BLA-mã NV` |
+| HRM – thêm nhân sự | Phòng ban = Phòng Đào Tạo · **Kiểu NV = `Nhân sự bán thời gian`** · Hình thức làm việc: Online → `Làm việc online`, còn lại `Làm việc tại văn phòng` · CCCD ký tự giữ chỗ như mục 6a |
+| HRM – Tạo mới HĐ | Mã HĐ = số HĐDV · Ngày ký = Ngày bắt đầu · Trạng thái `Chờ ký / Chờ duyệt` · **Loại HĐ = `Chính thức`** · Thời hạn `1 năm` · Ngày kết thúc = bắt đầu + 12 tháng − 1 ngày · Link scan = Google Doc HĐDV · Ô ẩn: `salary_basic` = **mức phí/giờ** (VD 250000) · `salary_official` = mức phí/giờ · `salary_kpi` = 0 · `allowance_total` = 0 · `salary_insurance` = 0 · `salary_probation` = 0 (xóa giá trị 85% HRM tự điền) · Ghi chú "AI tạo tự động (luồng 1.1 – HĐDV). Phí giảng dạy …/giờ. Pháp nhân: BLA Academy. Thư mục: <link>" |
+| HRM – Lương | Lương cơ bản = mức phí/giờ, các ô khác 0 (tài khoản hiện chưa có quyền → ghi Todolist nhờ HCNS) |
+| Todolist | `[1.1 – HĐDV] HĐDV + CKBM – [Họ tên] – Phòng Đào tạo – Mã NV – phí …/giờ – [link thư mục]` + cảnh báo nếu có |
 
 ## 4. Tạo bộ hồ sơ trên Drive
 1. Trong thư mục phòng ban, tạo thư mục `[Họ và tên] - [Vị trí]` (đã có thì dùng lại).
