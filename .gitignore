@@ -1,0 +1,44 @@
+# ============================================================
+# BLA AI workspace – KHÔNG đẩy dữ liệu mật lên GitHub
+# (quy tắc 6.4 trong CLAUDE.md: dữ liệu nhân sự, lương là mật)
+# ============================================================
+
+# Nhật ký công việc – có tên, SĐT, email, mã NV
+**/nhat-ky/
+
+# Bản nháp, file xuất ra, ảnh
+**/dau-ra/
+
+# File mẫu HĐ gốc của công ty (bản Word tải từ Drive)
+**/mau-goc/
+
+# Mọi file văn bản/bảng tính/ảnh/PDF (HĐ, hồ sơ, bảng lương…)
+*.docx
+*.doc
+*.xlsx
+*.xls
+*.csv
+*.pdf
+*.png
+*.jpg
+*.jpeg
+
+# Tài liệu INTERNAL-CONFIDENTIAL (tên người, tỷ lệ vốn, mức phí) – chỉ giữ trên máy
+# (người dùng chốt 20/11/2026)
+set-up-agent/docs/BLA_KNOWLEDGE_BASE.md
+set-up-agent/README.md
+set-up-agent/.agents/skills/bla-germany-intl/
+.claude/skills/bla-germany-intl/
+# Có khung giá phát hành cổ phần tăng vốn 2026
+set-up-agent/.agents/skills/bla-corporate-gov/
+.claude/skills/bla-corporate-gov/
+
+# Cấu hình máy cá nhân của Claude Code
+.claude/settings.local.json
+
+# Thư mục tạm
+New folder/
+~$*
+*.tmp
+Thumbs.db
+desktop.ini
