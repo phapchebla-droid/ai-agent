@@ -9,6 +9,8 @@ Workspace dùng chung với Antigravity. **Nguồn gốc tri thức nằm trong 
 
 Tổng quan mô hình 4 luồng công việc: `set-up-agent/README.md`.
 
+Bản đồ tri thức Pháp chế & HCNS (link Drive/ERP tới quy trình, văn bản, mẫu HĐ, giấy phép – tổng hợp 20/11/2026): `set-up-agent/docs/BLA_TRI_THUC_PHAP_CHE_HCNS.md` → đọc khi cần tìm tài liệu gốc.
+
 ## 2. Người dùng & cách trả lời
 
 - Người dùng chính: chuyên viên Pháp chế BLA, không chuyên lập trình → hướng dẫn từng bước, dễ làm theo; chủ động làm phần việc được phép.
