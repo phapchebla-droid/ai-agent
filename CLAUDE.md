@@ -55,5 +55,5 @@ Workspace là kho git, nhánh `main`, đẩy lên repo **Private** https://githu
 - **Tự đẩy, không cần người dùng nhắc**: mỗi khi Claude sửa hoặc tạo file cấu hình/quy trình (các `CLAUDE.md`, skill, SOP trong `mau/`, `GEMINI.md`, `.gitignore`…), cuối lượt làm việc thì commit (ghi chú tiếng Việt, nói rõ thay đổi gì) và `git push`, rồi báo người dùng một dòng.
 - **Trước mỗi lần đẩy**: chạy `git status --ignored`, đọc phần thay đổi (`git diff --cached`). Không đẩy tên/SĐT/email/mã NV/lương của nhân sự, số CCCD/MST/BHXH/STK, tỷ lệ vốn, mức phí, giá phát hành. File mới có dữ liệu như vậy → thêm vào `.gitignore`, không commit, báo người dùng.
 - **Không bao giờ đẩy**: những gì `.gitignore` loại trừ (`nhat-ky/`, `dau-ra/`, `mau-goc/`, file Word/Excel/PDF/ảnh, `BLA_KNOWLEDGE_BASE.md`, `set-up-agent/README.md`, skill `bla-germany-intl`, `bla-corporate-gov`). Không dùng `git add -f`, không `push --force`, không xóa lịch sử.
-- Lượt chạy tự động 1.1 (9h/14h) chỉ ghi `nhat-ky/` → không cần đẩy.
+- Lượt chạy tự động 1.1 (9h hằng ngày) chỉ ghi `nhat-ky/` → không cần đẩy.
 - Đẩy lỗi vì cần đăng nhập → chạy lại lệnh push trong tab Terminal để hiện cửa sổ đăng nhập, nhờ người dùng đăng nhập.

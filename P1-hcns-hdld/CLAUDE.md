@@ -8,7 +8,7 @@ Pháp lý lao động và hồ sơ nhân sự: HĐLĐ, HĐDV giảng dạy, ph�
 ## Session
 | Mã | Session | Nhiệm vụ | Tự động hóa |
 |---|---|---|---|
-| 1.1 | Nhân sự mới – HĐLĐ/HĐDV | Form → HRM → HĐ thử việc + Cam kết bảo mật → lưu đúng thư mục phòng ban → báo Todolist | **Tự động 9h00 & 14h00** (SOP: `mau/sop-1.1-nhan-su-moi.md`) |
+| 1.1 | Nhân sự mới – HĐLĐ/HĐDV | Form → HRM → HĐ thử việc + Cam kết bảo mật → lưu đúng thư mục phòng ban → báo Todolist | **Tự động 9h00 hằng ngày** (tạm bỏ lượt 14h – người dùng chốt 20/11/2026) (SOP: `mau/sop-1.1-nhan-su-moi.md`) |
 | 1.2 | Tái ký HĐ hết hạn | Quét HĐ sắp hết hạn trên HRM → danh sách + dự thảo HĐ mới / QĐ không tái ký | Định kỳ hằng tuần |
 | 1.3 | QĐ nhân sự & báo cáo LĐ | QĐ khen thưởng, kỷ luật, chấm dứt; báo cáo lao động, BHTN | Theo lệnh |
 

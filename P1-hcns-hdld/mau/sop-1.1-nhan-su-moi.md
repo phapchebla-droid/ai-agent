@@ -1,6 +1,6 @@
 # SOP 1.1 · NHÂN SỰ MỚI – HĐ THỬ VIỆC + CAM KẾT BẢO MẬT
 
-Người dùng chốt ngày 19/11/2026. Áp dụng cho mỗi lần quét tự động (9h00 và 14h00) hoặc khi người dùng ra lệnh.
+Người dùng chốt ngày 19/11/2026. Áp dụng cho mỗi lần quét tự động (9h00 hằng ngày; lượt 14h00 tạm bỏ từ 20/11/2026) hoặc khi người dùng ra lệnh.
 
 ## 0. Nguồn & đích
 
