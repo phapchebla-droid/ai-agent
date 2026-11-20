@@ -44,7 +44,7 @@ Không có gì mới → chỉ ghi 1 dòng nhật ký. Người dùng cũng có 
 5. **Nhận diện HĐ dịch vụ giảng dạy (HĐDV)** – trên HRM, HĐDV vẫn ghi Loại = `Chính thức`, 1 năm (theo SOP 1.1 mục 3a), nên phải nhận diện theo dấu hiệu, có **một** dấu hiệu là coi là HĐDV:
    - Mã HĐ chứa `HĐDV`; hoặc
    - Trang chi tiết HĐ có Lương chính thức/Lương cơ bản **< 1.000.000** (là phí/giờ, VD 250,000); hoặc
-   - Ghi chú HĐ có "HĐDV"; hoặc nhân sự có Kiểu NV `Nhân sự bán thời gian` thuộc Phòng Đào tạo.
+   - Ghi chú HĐ có "HĐDV"; hoặc nhân sự Phòng Đào tạo có Kiểu NV `Nhân sự bán thời gian` (trên danh sách nhân sự: link "Cập nhật trạng thái Nhân viên" có `data-type=part_time`); lương cơ bản thường 200,000–350,000.
    Dấu hiệu mâu thuẫn (VD mã HĐLĐ nhưng lương < 1 triệu) → vẫn xếp HĐDV, ghi cột S "PC xác nhận loại HĐ". HĐDV dùng ngưỡng **30 ngày** như HĐLĐ.
 
 ## 2. Đề xuất loại HĐ tiếp theo (cột R, S)
@@ -166,7 +166,7 @@ Todolist: `[1.2] Đã gửi TB review [sau thử việc | tái ký] – [Họ t�
 
 | Bước | Cách làm |
 |---|---|
-| Mẫu & tên file | `Mẫu HĐ dịch vụ giảng dạy (trống)` Google Doc `1Mcb9VgDFyyORuftx-IBB9Yy9XkNJHZwC90PyH7ogZ4Q` → `copy_file` vào thư mục nhân sự (Phòng Đào tạo, `[Họ và tên] - [Vị trí]`, đã có thì dùng lại). Tên `HĐDV - [Họ tên] - tái ký [dd.mm.yyyy]`. Pháp nhân luôn BLA Academy. **Không** ký lại CKBM |
+| Mẫu & tên file | `Mẫu HĐ dịch vụ giảng dạy (trống)` Google Doc `1Mcb9VgDFyyORuftx-IBB9Yy9XkNJHZwC90PyH7ogZ4Q` → `copy_file` vào thư mục nhân sự trong **Phòng Đào tạo › `00A. Part time`** (`1jyPBcXA4oWh_Yc2-PToYjPaNSwSaNakz`), thư mục con `[Họ và tên] - [Vị trí]` (đã có thì dùng lại). Tên `HĐDV - [Họ tên] - tái ký [dd.mm.yyyy]`. Pháp nhân luôn BLA Academy. **Không** ký lại CKBM |
 | Ngày bắt đầu | Cột W; trống = ngày hết hạn HĐDV cũ + 1 |
 | Ngày kết thúc | Cột X: số tháng N → bắt đầu + N tháng − 1 ngày; "đến dd/mm/yyyy" → đúng ngày đó. X ghi khó hiểu → hỏi PC, không đoán |
 | Chỗ trống | Như SOP 1.1 mục 3a: `Số: ddmmyy-HĐDV/BLA-mã NV` (ddmmyy = ngày bắt đầu mới) · "Hôm nay, ngày … tháng … năm 2026" = ngày bắt đầu mới (sửa cả năm) · Ông/Bà + họ tên · Sinh ngày · CCCD: **số để trống**, điền Ngày cấp, Nơi cấp · Thường trú · Nơi ở hiện tại · Điện thoại · Email · Tài khoản ngân hàng: **để trống** · **2.1 "từ ngày …… đến hết ngày ……"** = ngày bắt đầu / kết thúc ở trên · **3.1 Mức phí `……… VND/01 giờ`** = cột V (trống = phí cũ trên HRM), viết `250,000` như mẫu |
@@ -175,7 +175,7 @@ Todolist: `[1.2] Đã gửi TB review [sau thử việc | tái ký] – [Họ t�
 | Sheet & Todolist | AA = link thư mục, Z = `3. AI đã làm HĐ – chờ kiểm tra`. Todolist: `[1.2 – HĐDV] Tái ký HĐDV – [Họ tên] – Mã NV – [bắt đầu]–[kết thúc] – phí …/giờ – [link]` + "HCNS điền số CCCD, STK" |
 
 **Ghi chú kỹ thuật (chạy thử 3, 20/11/2026):**
-- Thư mục: ưu tiên thư mục chứa **HĐDV cũ** của nhân sự (link scan trên HĐ điện tử HĐDV cũ → lấy thư mục cha); không có mới dùng `[Họ và tên] - [Vị trí]` trong Phòng Đào tạo.
+- Thư mục: ưu tiên thư mục chứa **HĐDV cũ** của nhân sự (link scan trên HĐ điện tử HĐDV cũ → lấy thư mục cha); không có thì dùng `[Họ và tên] - [Vị trí]` trong `00A. Part time` (theo SOP 1.1, session 1.1 xác nhận 20/11/2026).
 - Mẫu HĐDV là đoạn văn thường (trừ ô Tài khoản ngân hàng – để trống): `replaceAllText` regex `Nhãn: …+` chạy được cho Bên B, Sinh ngày, Ngày cấp, Nơi cấp, Thường trú, Nơi ở, Điện thoại, Email, mức phí. **"Hôm nay, ngày … tháng … năm 2026" và "2.1 … từ ngày …… đến hết ngày ……" KHÔNG khớp** (kể cả khớp nguyên văn) → sửa theo vị trí: đọc `read_doc`, tìm đoạn bằng PowerShell, `deleteContentRange` + `insertText` từ index lớn về nhỏ. Luôn đọc lại bằng `read_file_content` để kiểm tra.
 - HRM: chọn "2 tháng" (gần 6 nhất) → HRM tự tính ngày kết thúc 2 tháng → sau đó gán lại `end_date` đúng; kiểm tra lại trên danh sách HĐ: lưu đúng ngày sửa tay.
 
