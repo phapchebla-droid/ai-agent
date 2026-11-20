@@ -65,7 +65,7 @@ Mỗi nhân sự **một tin**. Các trường:
 
 | Trường | Giá trị |
 |---|---|
-| Tiêu đề | `[Họ tên]_Thông báo review ký HĐLĐ sau thời gian thử việc` · `[Họ tên]_Thông báo review tái ký hợp đồng lao động` · HĐDV: `[Họ tên]_Thông báo review tái ký hợp đồng dịch vụ giảng dạy` |
+| Tiêu đề | `[Họ tên]_Thông báo review ký HĐLĐ sau thời gian thử việc` · `[Họ tên]_Thông báo review tái ký hợp đồng lao động` · HĐDV: xem mục 3c (tiêu đề + nội dung riêng) |
 | Kiểu | Thông báo · Ưu tiên: Bình thường · Trạng thái: Đã xuất bản · Ngày ban hành: hôm nay |
 | Gửi thông báo | `Gửi thông báo` |
 | Đối tượng nhận | `Nhân viên` → tích: nhân sự đó + người nhận cố định (mục 3a) |
@@ -101,7 +101,31 @@ Trân trọng!
 ```
 "Tại đây" gắn link Phiếu Review tương ứng (mục 0).
 
-**Biến thể HĐDV** (cùng mẫu, chỉ thay các cụm sau): "Review [tái ký Hợp đồng dịch vụ giảng dạy]" · Loại hợp đồng hiện tại: "Hợp đồng dịch vụ giảng dạy" · "Phiếu Review [tái ký HĐDV]" – tạm dùng Phiếu Review tái ký (`1DPYjlz0…`) ⏳ PC có phiếu riêng cho giáo viên HĐDV thì thay · câu cuối "…tiến độ ký HĐDV". Giữ "Mã nhân viên" (HĐDV vẫn có mã trên HRM).
+### 3c. Nội dung thông báo cho HĐDV (mẫu riêng – người dùng chốt 20/11/2026)
+HĐDV là quan hệ **dân sự/dịch vụ**, không phải lao động → **không dùng** các từ: NLĐ, người lao động, nhân sự, CBNV, nhân viên, Trưởng phòng/Quản lý trực tiếp (theo nghĩa cấp trên), phê duyệt, HĐLĐ, tái ký HĐLĐ. Dùng: **Ông/Bà, giảng viên, Bên cung ứng dịch vụ, Phòng Đào tạo (bộ phận phụ trách lớp), đánh giá chất lượng dịch vụ, xem xét – thống nhất gia hạn/ký Hợp đồng mới**.
+
+Tiêu đề: `[Họ tên]_Thông báo đánh giá chất lượng dịch vụ và xem xét gia hạn hợp đồng dịch vụ giảng dạy`
+```
+BLA Academy thông báo tới Ông/Bà [HỌ TÊN] về việc đánh giá chất lượng dịch vụ giảng dạy và xem xét gia hạn/ký Hợp đồng dịch vụ giảng dạy mới, cụ thể như sau:
+
+- Mã số trên hệ thống: [BLA-xxxx]
+- Họ và tên: [HỌ TÊN]
+- Dịch vụ cung ứng: Giảng dạy tiếng Đức – [Vị trí/trình độ phụ trách nếu có]
+- Hợp đồng hiện tại: Hợp đồng dịch vụ giảng dạy số [số HĐ]
+- Thời hạn: [dd/mm/yyyy] – [dd/mm/yyyy]
+
+Để có căn cứ xem xét việc gia hạn hoặc ký Hợp đồng dịch vụ mới khi Hợp đồng hiện tại hết hạn, đề nghị Ông/Bà:
+1. Hoàn thiện Phiếu đánh giá theo mẫu (tải mẫu Tại đây), phần tự đánh giá về quá trình cung ứng dịch vụ giảng dạy;
+2. Gửi Phiếu cho Phòng Đào tạo (bộ phận phụ trách lớp học) để nhận xét về chất lượng giảng dạy và đề xuất;
+3. Gửi Phiếu đã có đủ nội dung về Phòng HCNS trước ngày [ngày gửi + 5] để Công ty xem xét, thống nhất với Ông/Bà về việc gia hạn hoặc ký Hợp đồng mới.
+
+Đề nghị Phòng Đào tạo phối hợp nhận xét đúng hạn để việc xem xét gia hạn Hợp đồng không bị gián đoạn lịch giảng dạy.
+
+Trân trọng!
+```
+- Phiếu đánh giá: tạm dùng Phiếu Review tái ký (`1DPYjlz0…`) ⏳ PC có phiếu riêng cho giảng viên HĐDV thì thay link.
+- Người nhận: như mục 3a (giảng viên + người nhận cố định).
+- Áp dụng cùng nguyên tắc cho **TB chấm dứt HĐDV** (mục 6b) và Todolist/ghi chú: dùng "giảng viên/Bên B", không dùng "NLĐ/nhân sự".
 
 ## 4. Ghi Sheet theo dõi
 Thêm 1 dòng/nhân sự vào tab `Theo dõi tái ký (AI)`, điền cột A–S, Z = `1. Đã gửi TB – chờ review`, Q = link tin HRM. Ngày viết dd/mm/yyyy.
