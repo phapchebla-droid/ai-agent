@@ -70,7 +70,7 @@ Thao tác: trang tạo tin `/hrm-new-create` (**đợi trang tải xong mới đ
 Hạn nộp Phiếu Review = **ngày gửi TB + 5 ngày** (người dùng chốt 20/11/2026).
 
 ### 3a. Người nhận cố định (người dùng chốt 20/11/2026)
-Nhân sự được review + Ban Lãnh đạo (4 người) + Trưởng phòng HCNS + Pháp chế. **Không** gửi Ban Hành chính – Nhân sự.
+Nhân sự được review + Ban Lãnh đạo (2 người – PC chốt bỏ 2 thành viên BLĐ, xem danh sách trong nhật ký) + Trưởng phòng HCNS + Pháp chế. **Không** gửi Ban Hành chính – Nhân sự.
 Danh sách tên/mã cụ thể lưu tại `../nhat-ky/1.2-theo-doi.md` (không đẩy GitHub). Ô tích người nhận trên form tin: `employees[]`, value = phần số của mã NV.
 
 ### 3b. Nội dung thông báo (đã tối ưu, dùng chung 2 loại)
