@@ -65,7 +65,7 @@ Mỗi nhân sự **một tin**. Các trường:
 | Nội dung | Mẫu 3b (ô CKEditor: `CKEDITOR.instances.inputContent.setData(html)`) |
 | Ảnh bìa (bắt buộc) | Logo BLA `/images/logo-bla.png` (lấy blob trên trang rồi gán vào ô `photo`) – ⏳ PC có ảnh bìa chuẩn thì thay |
 
-Thao tác: trang tạo tin `/hrm-new-create`; người nhận chọn trong hộp "Chọn nhân viên" (ô `employees[]`) → "Xong" → kiểm tra dòng "Bạn đã chọn N nhân viên" → "Thêm bài viết" → báo "Thành công"; tin mới nằm đầu `/hrm/news` (lấy link xem + MS).
+Thao tác: trang tạo tin `/hrm-new-create` (**đợi trang tải xong mới điền** – điền sớm thì trang tải lại và mất dữ liệu; sau khi điền kiểm tra lại "Bạn đã chọn N nhân viên", nội dung, ảnh bìa); người nhận chọn trong hộp "Chọn nhân viên" (ô `employees[]`) → "Xong" → kiểm tra dòng "Bạn đã chọn N nhân viên" → "Thêm bài viết" → báo "Thành công"; tin mới nằm đầu `/hrm/news` (lấy link xem + MS).
 
 Hạn nộp Phiếu Review = **ngày gửi TB + 5 ngày** (người dùng chốt 20/11/2026).
 
@@ -138,7 +138,16 @@ Todolist: `[1.2] Đã gửi TB review [sau thử việc | tái ký] – [Họ t�
 | PL – Lương hiệu quả công việc + bằng chữ | Tổng − mức BH |
 
 3. Lương: Tổng thu nhập = V (hoặc lương hiện tại); Lương cơ bản = mức BH (2a SOP 1.1); Thưởng hiệu quả = Tổng − mức BH (< 0 → cảnh báo).
-4. HRM → Tạo mới HĐ: Loại = Chính thức; thời hạn 12/24 tháng hoặc không xác định; Trạng thái `Chờ ký / Chờ duyệt`; Link = Google Doc; Ghi chú "AI tạo tự động (luồng 1.2)". Lương: tài khoản chưa có quyền → ghi Todolist cho HCNS (như 1.1).
+   **Kỹ thuật điền (rút ra từ chạy thử 2, 20/11/2026):**
+   - Tạo Google Doc: tải mẫu (`download_file_content`) → lưu `mau/mau-goc/` (BLA-XDTH.docx / ACA-XDTH.docx / …-KXDTH.docx) → `create_file` với tham chiếu `sha256:<hash>:<đường dẫn>` vào thư mục nhân sự.
+   - Ô bảng trống (Sinh ngày, Thường trú, Địa chỉ hiện tại) và "1.5 Bộ phận :" → `insertText` theo index (đọc `read_doc` → file lớn, trích index bằng PowerShell `ConvertFrom-Json`), chèn từ index lớn về nhỏ, **trước** các lệnh thay chữ.
+   - Các chỗ có "…" ở dòng văn bản → `replaceAllText` regex (`…+\.*`, ` +`).
+   - **Ô "Số CCCD … cấp ngày: ………. tại: ……" và "……… Email: ………" trong bảng: `replaceAllText` KHÔNG khớp** → dùng `deleteContentRange` + `insertText` theo vị trí ký tự (tính offset trong ô). Phần số CCCD (6 ký tự "…" đầu) giữ nguyên để HCNS điền.
+   - SĐT trên Form có thể mất số 0 đầu → thêm "0".
+4. HRM → Tạo mới HĐ: danh sách nhân sự (`/hrm/employees?status=active&page=N`, tìm dòng có mã NV – **không lọc bằng SĐT trên URL**) → link "Tạo mới HĐ" trên dòng đó → hộp "Thêm mới HĐ nhân viên …" (form `hrm-working-contract-store`).
+   - Mã HĐ = số HĐ mới; Ngày ký = Ngày bắt đầu = ngày bắt đầu HĐ mới; Trạng thái `Chờ ký / Chờ duyệt`; Loại = `Chính thức`; Thời hạn `12`/`24`/`0` (không xác định) → ngày kết thúc tự tính; Link scan = Google Doc; Ghi chú "AI tạo tự động (luồng 1.2) … Pháp nhân … Thư mục …".
+   - Lương: Lương cơ bản = mức BH · Lương KPI = lương hiệu quả · Phụ cấp = 0 · Lương đóng BH = mức BH → Tổng thu nhập chính thức tự cộng. **Các ô hiển thị không tự đồng bộ sang ô ẩn** (`salary_basic`, `salary_kpi`, `allowance_total`, `salary_insurance`, `salary_official`, `salary_probation`) → gán trực tiếp giá trị số (không dấu chấm) cho ô ẩn trước khi bấm "Thêm mới".
+   - Sau khi tạo: mở `/hrm-working-contract/<id>` kiểm tra. **"Lương đóng BHXH" hiện 0 dù đã gửi** (HRM chưa nhận trường này) → ghi Todolist nhờ HCNS kiểm tra. Mục "Lương" (Tạo mới lương) tài khoản chưa có quyền → ghi Todolist như 1.1.
 5. Sheet: Z = link thư mục, Y = `3. AI đã làm HĐ – chờ kiểm tra`. Todolist: `[1.2] HĐLĐ … – [Họ tên] – [Phòng] – Mã NV – [link]`.
 6. PC kiểm tra xong tự chuyển Y = `5. Hoàn tất`.
 
