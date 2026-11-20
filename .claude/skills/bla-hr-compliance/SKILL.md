@@ -87,7 +87,9 @@ Hợp đồng sau khi tạo phải được lưu trữ đúng thư mục tại:
 3. **Đúng vị trí lưu trữ**: File nằm trong thư mục cá nhân đặt trong đúng thư mục Phòng ban tương ứng trên Google Drive.
 
 ## 4. Quản lý Tái ký Hợp đồng Lao động (Hết hạn HĐ)
-*(Chờ người dùng cung cấp chi tiết thiết lập luồng để hoàn thiện quy trình).*
+- Quy trình chi tiết: `P1-hcns-hdld/mau/sop-1.2-tai-ky.md` (bản nháp, người dùng chốt yêu cầu 20/11/2026).
+- Tóm tắt: lọc HĐ trên HRM `/hrm/hrm-working-contract?&expires_in=30` (HĐLĐ còn ≤ 30 ngày, thử việc còn ≤ 15 ngày) → đăng TB review trên HRM (hạn nộp Phiếu Review = ngày gửi + 5 ngày) → ghi Sheet "Rà soát HĐ nhân sự", tab `Theo dõi tái ký (AI)` → Pháp chế điền kết quả (cột vàng) → AI làm HĐ mới như luồng 1.1 (không ký lại Cam kết bảo mật) hoặc chuyển luồng 1.3 nếu không tái ký.
+- Lộ trình HĐ BLA: Thử việc → XĐTH 12 tháng → XĐTH 24 tháng → Không xác định thời hạn (bắt buộc sau 2 lần XĐTH – khoản 2 Điều 20 BLLĐ 2019).
 
 ## 5. Quyết định nhân sự & Báo cáo Nhà nước
 - Soạn thảo Quyết định khen thưởng (thưởng nóng tuyển sinh, thưởng đóng góp).
