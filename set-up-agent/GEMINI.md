@@ -30,6 +30,10 @@ Tài liệu ngữ cảnh tham chiếu: [BLA_KNOWLEDGE_BASE.md](file:///H:/ai-age
    - Thư mục Ban Pháp chế & Kiểm soát nội bộ: `1LoIEWl99je8-Cl-jDzocEVu2MGRF507A`
    - Thư mục Hợp đồng lao động: `1mqd2Tq1Bg3rgoD-4vHQObd_h_tZRBilM`
    - Thư mục Hợp đồng tổng hợp: `18-wQ3nVvEWPgvSdjRooI5ljzEEQo1RYq`
+   - Thư mục Thông báo – Quyết định nội bộ (sổ 00C văn bản đang áp dụng): `1mzYoDlyVwYYa-YTfxPUuVDOsOYq979Aq`
+   - Thư mục Hệ thống quy trình BLA (Bảng tổng hợp quy trình 2026): `14h8nq_bzTH-2gJ5oZHmPORY2lOYZ8rHZ`
+   - ERP EduBox: https://tiengduc.bla.vn (HRM, CTR – duyệt HĐ học viên, BLA Wiki)
+   - **Bản đồ tri thức chi tiết kèm link:** `docs/BLA_TRI_THUC_PHAP_CHE_HCNS.md` — đọc trước khi tìm tài liệu gốc.
 
 ---
 
