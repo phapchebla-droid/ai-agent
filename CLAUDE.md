@@ -47,3 +47,13 @@ Tổng quan mô hình 4 luồng công việc: `set-up-agent/README.md`.
 3. **Không xóa** nhân sự/hồ sơ; ưu tiên chuyển trạng thái (VD: "Nghỉ việc"). Xóa chỉ khi người dùng yêu cầu và xác nhận.
 4. Dữ liệu nhân sự, lương là **mật**: không đưa ra dịch vụ bên ngoài, không ghi vào URL.
 5. Khi HRM và Sheet mâu thuẫn: báo rõ từng điểm lệch, không tự sửa bên nào.
+
+## 7. Sao lưu GitHub (tự động – người dùng chốt 20/11/2026)
+
+Workspace là kho git, nhánh `main`, đẩy lên repo **Private** https://github.com/phapchebla-droid/ai-agent (Git: `C:\Program Files\Git\cmd\git.exe`).
+
+- **Tự đẩy, không cần người dùng nhắc**: mỗi khi Claude sửa hoặc tạo file cấu hình/quy trình (các `CLAUDE.md`, skill, SOP trong `mau/`, `GEMINI.md`, `.gitignore`…), cuối lượt làm việc thì commit (ghi chú tiếng Việt, nói rõ thay đổi gì) và `git push`, rồi báo người dùng một dòng.
+- **Trước mỗi lần đẩy**: chạy `git status --ignored`, đọc phần thay đổi (`git diff --cached`). Không đẩy tên/SĐT/email/mã NV/lương của nhân sự, số CCCD/MST/BHXH/STK, tỷ lệ vốn, mức phí, giá phát hành. File mới có dữ liệu như vậy → thêm vào `.gitignore`, không commit, báo người dùng.
+- **Không bao giờ đẩy**: những gì `.gitignore` loại trừ (`nhat-ky/`, `dau-ra/`, `mau-goc/`, file Word/Excel/PDF/ảnh, `BLA_KNOWLEDGE_BASE.md`, `set-up-agent/README.md`, skill `bla-germany-intl`, `bla-corporate-gov`). Không dùng `git add -f`, không `push --force`, không xóa lịch sử.
+- Lượt chạy tự động 1.1 (9h/14h) chỉ ghi `nhat-ky/` → không cần đẩy.
+- Đẩy lỗi vì cần đăng nhập → chạy lại lệnh push trong tab Terminal để hiện cửa sổ đăng nhập, nhờ người dùng đăng nhập.
