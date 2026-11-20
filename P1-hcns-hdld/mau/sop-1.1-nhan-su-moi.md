@@ -11,7 +11,7 @@ Người dùng chốt ngày 19/11/2026. Áp dụng cho mỗi lần quét tự đ
 | Giao diện Form (20/11/2026) | Ảnh đầu logo BLA (`Header Form Thong tin nhan su moi - BLA.png` trên My Drive), màu đỏ BLA, 5 nhóm I–V, lời chào ở mô tả, thông báo sau khi nộp nhắc bộ hồ sơ giấy. **Không đổi tên câu hỏi** (tên câu hỏi = tên cột Sheet mà SOP đọc). |
 | HRM | https://tiengduc.bla.vn/hrm/employees?status=active (Claude in Chrome, phiên đăng nhập của người dùng) |
 | Thư mục lưu | `01. Bản soạn thảo` `1hcT-C6RxUBMTW9PANh8pEwGf2SWPjdfp` → thư mục phòng ban → `[Họ và tên] - [Vị trí]` |
-| Todolist | `1pZZVTGRzqW6Txwb2Y2GgtJdL_KUwuLdJMDRk0ge2Iso`, tab `T1/2026` (một tab cho cả năm) |
+| Todolist | `1pZZVTGRzqW6Txwb2Y2GgtJdL_KUwuLdJMDRk0ge2Iso`, tab có **sheetId `1882124751`** (một tab cho cả năm; tên tab có thể đổi – 20/11/2026 là `T11/2026`, trước đó `T1/2026`). Luôn tìm tab theo sheetId bằng `get_spreadsheet`, lấy tên hiện tại rồi mới đọc/ghi. |
 | Theo dõi đã xử lý | `../nhat-ky/1.1-theo-doi.md` |
 
 ## 1. Phát hiện nhân sự mới
@@ -84,7 +84,7 @@ Thư mục phòng ban (con của `01. Bản soạn thảo`):
 
 ## 5. Kiểm tra & báo cáo
 1. **Kiểm tra pháp lý**: lương thử việc phải ≥ 85% lương chính thức (Điều 26 BLLĐ 2019); thưởng hiệu quả < 0; thiếu/không đọc được dữ liệu → vẫn làm, nhưng ghi **cảnh báo** vào Todolist.
-2. Ghi Todolist (tab `T1/2026`, dòng trống đầu tiên từ dòng 6): Ngày = hôm nay · Mô tả = `[1.1] HĐTV + CKBM – [Họ tên] – [Phòng] – Mã NV [..] – [link thư mục] – Cần HCNS điền: số CCCD, STK ngân hàng` (+ cảnh báo nếu có) · Trạng thái = `AI đã làm - chờ kiểm tra`.
+2. Ghi Todolist (tab sheetId `1882124751`, dòng trống đầu tiên sau dòng cuối có dữ liệu ở cột B–E – đọc lại ngay trước khi ghi vì session 1.2 cũng ghi vào tab này): Ngày = hôm nay · Mô tả = `[1.1] HĐTV + CKBM – [Họ tên] – [Phòng] – Mã NV [..] – [link thư mục] – Cần HCNS điền: số CCCD, STK ngân hàng` (+ cảnh báo nếu có) · Trạng thái = `AI đã làm - chờ kiểm tra`.
 3. Cập nhật `../nhat-ky/1.1-theo-doi.md` và nhật ký ngày `../nhat-ky/YYYY-MM-DD.md`.
 
 ## 6. Trường hợp NLĐ chưa đăng ký tài khoản HRM
