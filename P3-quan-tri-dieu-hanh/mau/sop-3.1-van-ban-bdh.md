@@ -76,7 +76,22 @@ Claude không theo dõi bảng theo thời gian thực: làm bước tiếp theo
 | Lịch nghỉ lễ | Theo lễ | Quy trinh làm việc | Ngày nghỉ, làm bù | Toàn công ty |
 | QĐ chấm dứt HĐLĐ do hết hạn | Khi phát sinh | Quy trinh làm việc | (liên thông P1 – session 1.2) | Nhân sự liên quan |
 
-Header chung = **[Mẫu] Thông báo**. Mẫu riêng = chính các văn bản lặp lại ở trên. Đề xuất (chờ duyệt): lập thư mục "00. Mẫu thường xuyên dùng" trong thư mục soạn thảo, mỗi loại một bản mẫu sạch (biến để dạng [ ]), lập dần khi chạy từng loại.
+### 3a. Thư mục "00. Mẫu thường xuyên dùng" (tạo 21/11/2026) – `1nhShtREGu0IQXsS9_J3QUI2q89XltQ3e`
+Mẫu sạch: ngày, số hiệu, tháng, mã khóa/mã số lớp, số suất, mức ưu đãi/thưởng đã thay bằng `[ ]`. **Giữ nguyên** bảng giá niêm yết, lộ trình thanh toán, điều khoản chung, căn cứ → khi dùng phải đối chiếu QĐ giá & chính sách đang hiệu lực.
+| # | Mẫu | Doc ID | Nguồn |
+|---|---|---|---|
+| 00 | Header chung TB/QĐ BĐH | `1MbV6DfME4vRjP1PZp-aSEsIG-a1SlFliPBj5_e_WyAg` | [Mẫu] Thông báo |
+| 01 | TB Học bổng ưu đãi (X90) tháng [ ] – tab 2 là mẫu "Bổ sung" | `1WdmXoxpcuuEIVGsn5mk_OOWPuOmwL9wCFmsdzTCzfh4` | 265/2026 |
+| 02 | TB BLA Start tháng [ ] | `1ljWO-p8qxD_m_BBzyX_alTbZg8H8nVz80V-6ehTQDrM` | 249/2026 |
+| 03 | TB Ưu đãi KTX theo khóa | `1P6CPAx3oCxXJLZ33wlbjz-i1hhj0vXv1luSt4x_ddeA` | 248/2026 |
+| 04 | TB Gia hạn hỗ trợ KTX & suất ăn – Lái tàu (giữ căn cứ TB 221025/TB-BLA) | `1igLRB17IQB8z19UxnYLPsZ_VSlN_kdNW5vcaUA9XRYY` | 266/2026 (KTX) |
+| 05 | TB Thi đua tuyển sinh khóa Online tháng [ ] | `1dLTvS3FOsUaIwU1doaaGNZLZMq_3eC5_Q0_pRa4neg4` | 266/2026 (thi đua) |
+| 06 | TB Thưởng nóng tuyển sinh theo khóa | `1Gk-xtx8_qEKyDjVhX1uL64vJNDYo1LmQdIrSIjfLjMs` | 269/2026 |
+| 07 | QĐ Bổ sung danh mục & cơ cấu giá SPDV (có PL offline/online) | `19ogUerhcvjaq6ezm_YbntERAI4-ejyLnoL1FL_QLvJo` | 246/2026 |
+| 08 | TB Lịch nghỉ lễ | `1fCmpxvfpygGKrg4TL3Blm8MsCovV7pKGEBkiHXxUsvc` | 271/2026 |
+| 09 | TB Gia hạn ưu đãi kèm thưởng nóng các lớp khai giảng | `17E4o4MoGj7PWlJqF7ibMn9QnsVfUUMQslwsOWf4XMPg` | 204/2026 |
+| 10 | QĐ Ban hành khung phí dịch vụ – thù lao (có phụ lục + QĐ sửa đổi) | `1TK1eh7K_Y3nUKyluZPSt08Gl85e7dl5jhZ-pA2W3gho` | 260, 261.1/2026 |
+Khi dùng: sao chép mẫu sang đúng thư mục con → điền `[ ]` → soạn phần nội dung mới theo mục 2a. Khi BLĐ đổi khung chương trình → cập nhật mẫu tương ứng. Lưu ý: tên file Drive gốc đôi khi không khớp nội dung (VD: file "269 … thi đua online" thực là thưởng nóng) → luôn đọc nội dung, không dựa vào tên file.
 
 ## 4. Phân loại & đối tượng trong 00C (giữ đúng chữ)
 Phân loại: Nội quy, cơ chế, chế độ nhân viên · Hoạt động tư vấn, CSKH · Hoạt động đào tạo & giảng dạy, TVDH · Hoạt động đối tác, hợp tác · Hoạt động KTX · Hoạt động thi TELC · Hoạt động thu chi tài chính · Hoạt động truyền thông, MKT.
