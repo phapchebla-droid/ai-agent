@@ -42,7 +42,7 @@ Mẫu chỉ là khung thể thức; nội dung phải soạn bằng hiểu biế
 4. Thể thức: header theo **[Mẫu] Thông báo** (`1htw92B0T8zItogizDQMqfP66xUIpzYyxz3HvC4Gm1Kk`); QĐ có căn cứ – điều khoản – hiệu lực – nơi nhận.
 5. Chỗ chưa rõ (mức ưu đãi, thời hạn, đối tượng) → đánh dấu **[cần chị xác nhận]** trong dự thảo, không tự đặt số liệu kinh doanh.
 
-### 2b. Bảng trao đổi = sổ 00C (phương án chờ người dùng duyệt)
+### 2b. Bảng trao đổi = sổ 00C (người dùng duyệt & đã thêm cột 21/11/2026)
 Dùng ngay tab "Hệ thống quy định, thông báo" (mỗi văn bản một dòng, từ khi soạn tới khi hoàn tất). Giữ nguyên cột A–J; thêm cột K–N:
 | Cột | Tên | Ai điền |
 |---|---|---|
@@ -50,6 +50,7 @@ Dùng ngay tab "Hệ thống quy định, thông báo" (mỗi văn bản một d
 | L | Link bản soạn thảo | Claude |
 | M | Thông báo HRM (ngày đăng · MS bài) | Claude |
 | N | Trao đổi xử lý | Hai bên |
+Kỹ thuật: tab sheetId `971691359`; K3:K952 có danh sách chọn + tô màu theo trạng thái; tiêu đề K–N chép định dạng cột J. Dòng mới: thêm ngay dưới dòng cuối có dữ liệu, cột I nhận smart chip PDF (đọc link qua `chipRuns`).
 Claude không theo dõi bảng theo thời gian thực: làm bước tiếp theo khi người dùng nhắn trong phiên này (tùy chọn sau: lượt kiểm tra tự động hằng ngày các dòng "Đã ký – chờ HRM").
 
 ## 3. Thư viện văn bản lặp lại (mẫu = bản gần nhất cùng loại)
