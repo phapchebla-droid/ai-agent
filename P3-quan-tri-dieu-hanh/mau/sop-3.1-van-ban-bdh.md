@@ -43,14 +43,24 @@ Mẫu chỉ là khung thể thức; nội dung phải soạn bằng hiểu biế
 5. Chỗ chưa rõ (mức ưu đãi, thời hạn, đối tượng) → đánh dấu **[cần chị xác nhận]** trong dự thảo, không tự đặt số liệu kinh doanh.
 
 ### 2b. Bảng trao đổi = sổ 00C (người dùng duyệt & đã thêm cột 21/11/2026)
-Dùng ngay tab "Hệ thống quy định, thông báo" (mỗi văn bản một dòng, từ khi soạn tới khi hoàn tất). Giữ nguyên cột A–J; thêm cột K–N:
-| Cột | Tên | Ai điền |
-|---|---|---|
-| K | Trạng thái xử lý (danh sách: Đang soạn · Chờ duyệt · Đã ký – chờ HRM · Hoàn tất · Hủy) | Claude; người dùng đổi sang "Đã ký – chờ HRM" khi gắn scan |
-| L | Link bản soạn thảo | Claude |
-| M | Thông báo HRM (ngày đăng · MS bài) | Claude |
-| N | Trao đổi xử lý | Hai bên |
-Kỹ thuật: tab sheetId `971691359`; K3:K952 có danh sách chọn + tô màu theo trạng thái; tiêu đề K–N chép định dạng cột J. Dòng mới: thêm ngay dưới dòng cuối có dữ liệu, cột I nhận smart chip PDF (đọc link qua `chipRuns`).
+Dùng ngay tab "Hệ thống quy định, thông báo" (mỗi văn bản một dòng, từ khi soạn tới khi hoàn tất). Cột xếp theo trình tự xử lý (người dùng duyệt & đã sắp lại 21/11/2026):
+| Cột | Tên | Bước | Ai điền |
+|---|---|---|---|
+| A | STT | — | — |
+| B | Trạng thái xử lý (Đang soạn · Chờ duyệt · Đã ký – chờ HRM · Hoàn tất · Hủy) | Cả quá trình | Claude; người dùng đổi sang "Đã ký – chờ HRM" khi gắn scan |
+| C | [Mã số] Tên thông báo | 1–2 | Claude (số để trống; người dùng ghi số khi ký) |
+| D | Phân loại | 2 | Claude |
+| E | Đối tượng áp dụng | 2 | Claude |
+| F | Tóm tắt nội dung | 2 | Claude |
+| G | Link bản soạn thảo | 2 | Claude |
+| H | Trao đổi xử lý | 3 | Hai bên |
+| I | Ngày ban hành | 4 | Người dùng/Claude |
+| J | Ngày hiệu lực | 4 | Claude |
+| K | Ngày hết hạn | 4 | Claude |
+| L | Link bản scan | 4 | Người dùng (smart chip PDF) |
+| M | Thông báo HRM (ngày đăng · MS bài) | 5 | Claude |
+| N | Ghi chú | — | Hai bên |
+Kỹ thuật: tab sheetId `971691359`; B3:B952 có danh sách chọn + tô màu theo trạng thái; D, E giữ danh sách chọn cũ. Hàng 1: tiêu đề gộp C1:N1. Dòng mới: thêm ngay dưới dòng cuối có dữ liệu; đọc link scan ở cột L qua `chipRuns`. Đọc/ghi luôn theo **tên cột ở hàng 2**, không giả định vị trí.
 Claude không theo dõi bảng theo thời gian thực: làm bước tiếp theo khi người dùng nhắn trong phiên này (tùy chọn sau: lượt kiểm tra tự động hằng ngày các dòng "Đã ký – chờ HRM").
 
 ## 3. Thư viện văn bản lặp lại (mẫu = bản gần nhất cùng loại)
