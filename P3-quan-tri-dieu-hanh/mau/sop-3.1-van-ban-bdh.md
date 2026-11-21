@@ -104,4 +104,7 @@ Phân loại: Nội quy, cơ chế, chế độ nhân viên · Hoạt động t�
 
 ## 6. Ghi chú kỹ thuật
 - HRM: bài viết có Đối tượng (Toàn công ty / Phòng ban / Nhân viên), Kiểu (Tin tức / Thông báo / Chính sách, quy chế / Sự kiện), Trạng thái (Nháp / Đã xuất bản / Đã lưu trữ), Độ ưu tiên, nút Gửi thông báo. "MS" trên HRM là mã bài đăng, **không phải** số văn bản.
-- *(Bổ sung sau lần chạy thử.)*
+- **Tạo bài HRM** (chạy thử 1, 21/11/2026): trang `/hrm-new-create`; điền bằng JS sau khi trang tải xong: `title`, `type`=announcement, `status`=draft|published, `priority`=High, `issued_at`, `audience_type`=Company|Department|Employee, `notify_status`=False|True, `short_description`, nội dung `CKEDITOR.instances.inputContent.setData(html)`. Người nhận Nhân viên: tích `employees[]` (value = phần số mã NV) rồi bấm "Xong" → ô ẩn `employee_ids` thành `;id;` và hiện "Bạn đã chọn N nhân viên". Ảnh bìa bắt buộc: fetch `/images/logo-bla.png` → gán vào `photo` qua DataTransfer. Bấm "Thêm bài viết" → hộp "Thành công"; bài mới ở đầu `/hrm/news` (MS + link `/hrm-news/<MS>/edit`).
+- Nội dung bài HRM cho TB: chép toàn văn TB (bảng HTML) + dòng "Chi tiết Thông báo xem Tại đây" gắn link bản scan (như bài MS 304).
+- Bài nháp để chị duyệt: tiêu đề tiền tố `[NHÁP – CHỜ DUYỆT]`, Nháp, Không gửi, Đối tượng = chỉ người dùng. Khi xuất bản: sửa chính bài đó (bỏ tiền tố, gắn scan, đổi đối tượng, Gửi thông báo) – chỉ khi được đồng ý.
+- Ngày trong tuần: tính kỹ (VD 01/01/2027 = Thứ Sáu). Công ty có làm việc Thứ Bảy hay không → hỏi người dùng, chưa chốt.
