@@ -91,6 +91,7 @@ Mẫu sạch: ngày, số hiệu, tháng, mã khóa/mã số lớp, số suất,
 | 08 | TB Lịch nghỉ lễ | `1fCmpxvfpygGKrg4TL3Blm8MsCovV7pKGEBkiHXxUsvc` | 271/2026 |
 | 09 | TB Gia hạn ưu đãi kèm thưởng nóng các lớp khai giảng | `17E4o4MoGj7PWlJqF7ibMn9QnsVfUUMQslwsOWf4XMPg` | 204/2026 |
 | 10 | QĐ Ban hành khung phí dịch vụ – thù lao (có phụ lục + QĐ sửa đổi) | `1TK1eh7K_Y3nUKyluZPSt08Gl85e7dl5jhZ-pA2W3gho` | 260, 261.1/2026 |
+| 11 | TB Chính sách kích thích tuyển dụng – thưởng giới thiệu ứng viên | (lập mẫu sạch sau khi bản 11/2026 được ký) | 25/2026 → bản mới 11/2026 |
 Khi dùng: sao chép mẫu sang đúng thư mục con → điền `[ ]` → soạn phần nội dung mới theo mục 2a. Khi BLĐ đổi khung chương trình → cập nhật mẫu tương ứng. Lưu ý: tên file Drive gốc đôi khi không khớp nội dung (VD: file "269 … thi đua online" thực là thưởng nóng) → luôn đọc nội dung, không dựa vào tên file.
 
 ## 4. Phân loại & đối tượng trong 00C (giữ đúng chữ)
@@ -107,5 +108,7 @@ Phân loại: Nội quy, cơ chế, chế độ nhân viên · Hoạt động t�
 - **Tạo bài HRM** (chạy thử 1, 21/11/2026): trang `/hrm-new-create`; điền bằng JS sau khi trang tải xong: `title`, `type`=announcement, `status`=draft|published, `priority`=High, `issued_at`, `audience_type`=Company|Department|Employee, `notify_status`=False|True, `short_description`, nội dung `CKEDITOR.instances.inputContent.setData(html)`. Người nhận Nhân viên: tích `employees[]` (value = phần số mã NV) rồi bấm "Xong" → ô ẩn `employee_ids` thành `;id;` và hiện "Bạn đã chọn N nhân viên". Ảnh bìa bắt buộc: fetch `/images/logo-bla.png` → gán vào `photo` qua DataTransfer. Bấm "Thêm bài viết" → hộp "Thành công"; bài mới ở đầu `/hrm/news` (MS + link `/hrm-news/<MS>/edit`).
 - Nội dung bài HRM cho TB: chép toàn văn TB (bảng HTML) + dòng "Chi tiết Thông báo xem Tại đây" gắn link bản scan (như bài MS 304).
 - Bài nháp để chị duyệt: tiêu đề tiền tố `[NHÁP – CHỜ DUYỆT]`, Nháp, Không gửi, Đối tượng = chỉ người dùng. Khi xuất bản: sửa chính bài đó (bỏ tiền tố, gắn scan, đổi đối tượng, Gửi thông báo) – chỉ khi được đồng ý.
+- **Soạn từ văn bản cũ cùng loại** (chạy 25/11/2026): sao chép Doc cũ để giữ letterhead, font Times New Roman 12.5, bảng; đọc `read_doc` (kết quả lớn → lưu file, dùng PowerShell `ConvertFrom-Json` lập dàn ý start/end từng đoạn – máy không có Python); một lượt `update_doc` có `requiredRevisionId`: xóa từ dưới lên (đoạn cuối ô bảng: xóa [end đoạn trước −1, end −1]), chèn đoạn mới tại cuối đoạn trước (end−1) rồi đặt đậm/bullet theo vị trí tính sẵn; lượt sau dùng `replaceAllText` sửa câu chữ (thay phần không in đậm để khỏi lan định dạng).
+- Tiêu chí tuyển dụng: lấy từ văn bản nội bộ còn hiệu lực (VD TB 203/2026 điều kiện GV) trước, tin tuyển dụng công khai sau; tin cũ mâu thuẫn văn bản nội bộ → theo văn bản nội bộ và báo người dùng.
 - Ngày trong tuần: tính kỹ (VD 01/01/2027 = Thứ Sáu).
 - **Lịch làm việc/học (người dùng chốt 21/11/2026)**: CBNV làm buổi sáng Thứ Bảy; học viên không học Thứ Bảy. Khi lễ rơi vào Thứ Sáu mà công ty cho nghỉ luôn sáng Thứ Bảy → buổi đó tính vào phép năm, ai hết phép thì nghỉ không lương; không áp dụng cho NV part-time/HĐDV. Học viên: đi học lại Thứ Hai.
