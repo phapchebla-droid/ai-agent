@@ -43,8 +43,8 @@ Không có gì mới → chỉ ghi 1 dòng nhật ký. Người dùng cũng có 
 4. Với mỗi người mới: mở `/hrm/hrm-working-contract?&employee_id=<ID>` để đếm số HĐ đã ký; mở hồ sơ để lấy Mã NV, phòng ban, vị trí, lương hiện tại.
 5. **Nhận diện HĐ dịch vụ giảng dạy (HĐDV)** – trên HRM, HĐDV vẫn ghi Loại = `Chính thức`, 1 năm (theo SOP 1.1 mục 3a), nên phải nhận diện theo dấu hiệu, có **một** dấu hiệu là coi là HĐDV:
    - Mã HĐ chứa `HĐDV`; hoặc
-   - Trang chi tiết HĐ có Lương chính thức/Lương cơ bản **< 1.000.000** (là phí/giờ, VD 250,000); hoặc
-   - Ghi chú HĐ có "HĐDV"; hoặc nhân sự Phòng Đào tạo có Kiểu NV `Nhân sự bán thời gian` (trên danh sách nhân sự: link "Cập nhật trạng thái Nhân viên" có `data-type=part_time`); lương cơ bản thường 200,000–350,000.
+   - Trang chi tiết HĐ có Lương chính thức/Lương cơ bản **< 1.000.000** (là phí/giờ); hoặc
+   - Ghi chú HĐ có "HĐDV"; hoặc nhân sự Phòng Đào tạo có Kiểu NV `Nhân sự bán thời gian` (trên danh sách nhân sự: link "Cập nhật trạng thái Nhân viên" có `data-type=part_time`); lương cơ bản là phí/giờ (dưới 1 triệu).
    Dấu hiệu mâu thuẫn (VD mã HĐLĐ nhưng lương < 1 triệu) → vẫn xếp HĐDV, ghi cột S "PC xác nhận loại HĐ". HĐDV dùng ngưỡng **30 ngày** như HĐLĐ.
 
 ## 2. Đề xuất loại HĐ tiếp theo (cột R, S)
@@ -193,7 +193,7 @@ Todolist: `[1.2] Đã gửi TB review [sau thử việc | tái ký] – [Họ t�
 | Mẫu & tên file | `Mẫu HĐ dịch vụ giảng dạy (trống)` Google Doc `1Mcb9VgDFyyORuftx-IBB9Yy9XkNJHZwC90PyH7ogZ4Q` → `copy_file` vào thư mục nhân sự trong **Phòng Đào tạo › `00A. Part time`** (`1jyPBcXA4oWh_Yc2-PToYjPaNSwSaNakz`), thư mục con `[Họ và tên] - [Vị trí]` (đã có thì dùng lại). Tên `HĐDV - [Họ tên] - tái ký [dd.mm.yyyy]`. Pháp nhân luôn BLA Academy. **Không** ký lại CKBM |
 | Ngày bắt đầu | Cột W; trống = ngày hết hạn HĐDV cũ + 1 |
 | Ngày kết thúc | Cột X: số tháng N → bắt đầu + N tháng − 1 ngày; "đến dd/mm/yyyy" → đúng ngày đó. X ghi khó hiểu → hỏi PC, không đoán |
-| Chỗ trống | Như SOP 1.1 mục 3a: `Số: ddmmyy-HĐDV/BLA-mã NV` (ddmmyy = ngày bắt đầu mới) · "Hôm nay, ngày … tháng … năm 2026" = ngày bắt đầu mới (sửa cả năm) · Ông/Bà + họ tên · Sinh ngày · CCCD: **số để trống**, điền Ngày cấp, Nơi cấp · Thường trú · Nơi ở hiện tại · Điện thoại · Email · Tài khoản ngân hàng: **để trống** · **2.1 "từ ngày …… đến hết ngày ……"** = ngày bắt đầu / kết thúc ở trên · **3.1 Mức phí `……… VND/01 giờ`** = cột V (trống = phí cũ trên HRM), viết `250,000` như mẫu |
+| Chỗ trống | Như SOP 1.1 mục 3a: `Số: ddmmyy-HĐDV/BLA-mã NV` (ddmmyy = ngày bắt đầu mới) · "Hôm nay, ngày … tháng … năm 2026" = ngày bắt đầu mới (sửa cả năm) · Ông/Bà + họ tên · Sinh ngày · CCCD: **số để trống**, điền Ngày cấp, Nơi cấp · Thường trú · Nơi ở hiện tại · Điện thoại · Email · Tài khoản ngân hàng: **để trống** · **2.1 "từ ngày …… đến hết ngày ……"** = ngày bắt đầu / kết thúc ở trên · **3.1 Mức phí `……… VND/01 giờ`** = cột V (trống = phí cũ trên HRM), viết dạng `xxx,000` như mẫu |
 | Nguồn thông tin cá nhân | Hồ sơ HRM; thiếu thì lấy file HĐDV cũ trong thư mục nhân sự; vẫn thiếu → để "……" và ghi Todolist |
 | HRM – Tạo mới HĐ | Như SOP 1.1 mục 3a: Mã HĐ = số HĐDV mới · Ngày ký = Ngày bắt đầu · `Chờ ký / Chờ duyệt` · Loại `Chính thức` · Thời hạn: chọn `1/2/12/24/36` tháng nếu trùng N, không trùng → chọn giá trị gần nhất rồi **sửa tay Ngày kết thúc** cho đúng, ghi rõ ở Ghi chú · Link scan = Google Doc · Ô ẩn: `salary_basic` = `salary_official` = phí/giờ, các ô còn lại 0 · Ghi chú "AI tạo tự động (luồng 1.2 – tái ký HĐDV). Phí …/giờ. Thời hạn theo review PC: … Thư mục: <link>" |
 | Sheet & Todolist | AA = link thư mục, Z = `3. AI đã làm HĐ – chờ kiểm tra`. Todolist: `[1.2 – HĐDV] Tái ký HĐDV – [Họ tên] – Mã NV – [bắt đầu]–[kết thúc] – phí …/giờ – [link]` + "HCNS điền số CCCD, STK" |

@@ -1,6 +1,6 @@
 # P1 · HCNS & HỢP ĐỒNG LAO ĐỘNG
 
-Kế thừa quy tắc chung tại `../CLAUDE.md`. Skill chính: `bla-hr-compliance`.
+Kế thừa quy tắc chung tại `../CLAUDE.md`. Skill chính: `bla-hr-compliance`; luồng 1.2 tái ký có skill riêng `bla-tai-ky-hdld`.
 
 ## Phạm vi
 Pháp lý lao động và hồ sơ nhân sự: HĐLĐ, HĐDV giảng dạy, phụ lục lương, NDA, cam kết chi phí đào tạo, tái ký/không tái ký, QĐ khen thưởng/kỷ luật, báo cáo sử dụng lao động & BHTN.
