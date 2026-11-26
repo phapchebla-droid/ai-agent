@@ -1,6 +1,6 @@
 # P3 · QUẢN TRỊ & ĐIỀU HÀNH
 
-Kế thừa quy tắc chung tại `../CLAUDE.md`. Skill chính: `bla-corporate-gov`.
+Kế thừa quy tắc chung tại `../CLAUDE.md`. Skill chính: `bla-van-ban-bdh` (session 3.1 – trọn quy trình soạn, ghi sổ 00C, đăng HRM); `bla-corporate-gov` cho kiến thức quản trị công ty.
 Tra tài liệu gốc: `../set-up-agent/docs/BLA_TRI_THUC_PHAP_CHE_HCNS.md` mục 2 (pháp nhân), 3 (giấy phép), 6 (quy trình), 7 (văn bản điều hành).
 
 ## Phạm vi

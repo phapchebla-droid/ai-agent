@@ -25,7 +25,8 @@ Bản đồ tri thức Pháp chế & HCNS (link Drive/ERP tới quy trình, văn
 | Hợp đồng & đối tác | `bla-contract-ops` | Soạn/rà soát HĐ đào tạo, du học, thuê nhà, hợp tác, thanh lý |
 | Thẩm định hợp đồng | `bla-legal-reviewer` | Rà soát 5 bước, lập Legal Review Memo |
 | HCNS & lao động | `bla-hr-compliance` | HĐLĐ, phụ lục lương, NDA, cam kết đào tạo, onboarding, QĐ nhân sự |
-| Quản trị & điều hành | `bla-corporate-gov` | TB-BĐH, QĐ ban hành quy trình, HĐQT/ĐHĐCĐ, tăng vốn, ĐKKD |
+| Văn bản điều hành BĐH | `bla-van-ban-bdh` | Soạn TB/QĐ/CV-BĐH → sổ 00C → tải scan lên HRM, đăng thông báo (P3 · 3.1) |
+| Quản trị & điều hành | `bla-corporate-gov` | QĐ ban hành quy trình, HĐQT/ĐHĐCĐ, tăng vốn, ĐKKD |
 | BLA Germany & quốc tế | `bla-germany-intl` | GmbH, chuyển nhượng vốn, mô hình BLA–AVT, TELC |
 
 > Bản gốc skill: `set-up-agent/.agents/skills/`. Khi sửa skill, sửa bản gốc rồi chép lại sang `.claude/skills/` (hoặc nhờ Claude đồng bộ).

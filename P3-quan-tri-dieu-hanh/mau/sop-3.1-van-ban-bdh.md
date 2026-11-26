@@ -31,7 +31,7 @@ Mẫu ký hiệu: `[STT]/2026/TB-BĐH` · `[STT]/2026/QĐ-BĐH` · `[STT]/2026/C
 | 2. Soạn | Claude | Soạn theo **mục 2a** (có mẫu thì dùng làm khung, không có hoặc chưa phù hợp thì tự soạn) → tạo Doc trong đúng thư mục con → để trống số | **Xin đồng ý trước khi tạo file trên Drive** |
 | 3. Kiểm tra & ghi danh mục | Claude | Đối chiếu 00C/HRM: văn bản cùng chủ đề còn hiệu lực, trùng/mâu thuẫn, ngày tháng, chính tả, số liệu, nơi nhận → thêm dòng vào bảng trao đổi (mục 2b), trạng thái "Chờ duyệt" + link Doc | Báo kết quả kèm link dự thảo |
 | 4. Duyệt, ký, scan | Người dùng | Trình BLĐ duyệt, ghi số từ sổ ngoài vào dòng, ký, scan, up PDF vào "03. NĂM 2026" và gắn link vào cột "Link bản scan" | Người dùng nhắn "đã có scan" (hoặc đổi trạng thái) |
-| 5. Phân phối HRM | Claude | Lấy PDF từ link trên dòng → tạo bài **Nháp** trên HRM (tiêu đề, kiểu bài, đối tượng nhận theo mục 3, độ ưu tiên, đính kèm PDF) | **Người dùng xem nháp, đồng ý rõ ràng mới xuất bản & gửi thông báo** |
+| 5. Phân phối HRM | Claude | Lấy PDF từ link trên dòng → đối chiếu với dự thảo → tải PDF lên HRM → đăng bài **Đã xuất bản + Gửi thông báo** (tiêu đề, kiểu bài, đối tượng theo Nơi nhận – mục 6, độ ưu tiên, link PDF trên HRM) | Người dùng nhắn "gửi thông báo HRM" = đồng ý đăng (chốt 25/11/2026); chỉ làm nháp khi người dùng muốn xem trước |
 | 6. Hoàn tất | Claude | Điền ngày đăng + MS bài HRM, hoàn thiện các cột còn trống (hiệu lực, hết hạn, tóm tắt), trạng thái "Hoàn tất" | Ghi theo nội dung đã trình |
 
 ### 2a. Nguyên tắc soạn (người dùng chốt 21/11/2026)
