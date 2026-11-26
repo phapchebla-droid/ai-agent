@@ -14,6 +14,12 @@ Trạng thái: **KHUNG – chờ chạy thử** (tạo 21/11/2026). Căn cứ n�
 - Google Calendar của phapche.bla@gmail.com: sự kiện cả ngày, lặp hằng năm/quý, tiêu đề `[BC định kỳ] <mã> …`. Báo cáo **lao động (LĐ-xx) mời thêm hr@bla.vn**; còn lại chỉ phapche.
 - Todolist Pháp chế (Sheet `1pZZVTGRzqW6Txwb2Y2GgtJdL_KUwuLdJMDRk0ge2Iso`, tab nhật ký đang dùng): thêm dòng ngắn `[Nhắc BC] Còn N ngày (hạn dd/mm): …` – cột B ngày nhắc, C nội dung, D "High", E "Not Started". Ghi bằng `update_values` vào đúng hàng trống kế tiếp (không dùng `append_values`: bảng bị nhận diện ở cột E nên dữ liệu bị lệch cột). Mỗi lần thêm nhắc cho ~2 tháng tới.
 
+**LĐ-01 Báo cáo tình hình sử dụng lao động (làm lần đầu 26/11/2026):**
+- Hà Nội nộp qua Cổng việc làm `congvieclam.hanoi.gov.vn` (mỗi MST 1 tài khoản, người dùng tự đăng nhập/nộp). Lập **riêng BLA và BLA Academy**. Đính kèm PDF bản ký, đóng dấu; ≥10 NLĐ thì Import Excel theo mẫu tải từ cổng.
+- Chỉ kê khai NLĐ **đang làm việc tại thời điểm lập** (nghỉ trong kỳ thì bỏ); không kê CTV/HĐDV. Danh sách gốc = file BHXH người dùng xuất từ phần mềm BH; số HĐ, loại, thời hạn **lấy theo HRM**, lệch thì tô vàng + ghi file đối chiếu nội bộ (không đưa ghi chú nội bộ vào cột 27 của file nộp).
+- Mẫu Excel: dữ liệu từ **dòng 20**, xóa dòng mẫu, không sửa dòng tiêu đề/cột; chèn dòng trước dòng "…" khi >8 người, chừa 1 dòng trống trước "…". Ngày là giá trị ngày (hiển thị dd/mm/yyyy); CCCD, mã BHXH để dạng Text. Ngày bắt đầu đóng BHXH là ngày thực tế (không ghi 01/01, 01/07 hàng loạt).
+- Kỹ thuật: máy không có Python → dùng Excel qua PowerShell COM; gán số qua chuỗi (gán số trực tiếp báo lỗi ép kiểu); file .ps1 có tiếng Việt phải lưu UTF-8 **có BOM**. Bảng HĐ HRM: đọc bằng `fetch('/hrm/hrm-working-contract?page=N')` trong trang, đối chiếu tên ngay trong trình duyệt, trả kết quả ngắn (công cụ cắt kết quả ~1.000 ký tự).
+
 1. Mỗi lần rà soát: đối chiếu quy định mới (thay đổi bộ máy, nghị định thay thế) → trình người dùng danh sách thay đổi → ghi khi được đồng ý.
 2. Mỗi kỳ: checklist số liệu cần lấy → dự thảo báo cáo → người dùng nộp → cập nhật trạng thái, ngày nộp, link trong tab năm.
 
