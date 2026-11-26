@@ -5,7 +5,8 @@ Trạng thái: **KHUNG – chờ chạy thử** (tạo 21/11/2026; cập nhật 
 ## 0. Phạm vi & quyền hạn
 - Áp dụng cho HĐ học viên lập theo chính sách trên CTR (đào tạo tiếng Đức, TVDH, combo, KTX nếu có).
 - **Claude được tự làm:** đọc hàng đợi, mở từng HĐ, đối chiếu, ghi kết quả vào nhật ký và bảng đề xuất.
-- **Claude chưa được tự làm:** bấm *Đã rà*, *Trả lại*, sửa nội dung HĐ. → Trình bảng đề xuất, người dùng chọn: (a) người dùng tự bấm; hoặc (b) cho phép Claude bấm theo đề xuất **của lượt đó**.
+- **Claude được bấm "Đã rà"** cho HĐ đạt toàn bộ checklist (người dùng chốt 26/11/2026). Lượt chạy thử đầu (3–5 HĐ): vẫn trình bảng, người dùng xác nhận rồi mới bấm.
+- **Claude chưa được tự làm:** bấm *Trả lại*, sửa nội dung HĐ. → Đề xuất câu ghi chú; người dùng tự bấm hoặc cho phép Claude bấm **trong lượt đó**. HĐ "Cần PC xem" → không bấm gì.
 - Khi người dùng muốn ủy quyền tự động lâu dài: ghi rõ phạm vi, ngày chốt vào `../CLAUDE.md` (như P1 · 1.1).
 
 ## 1. Nguồn
@@ -23,7 +24,7 @@ Mới → Chờ xác thực (Admin TS) → **Chờ phê duyệt / Chờ pháp ch
 | # | Điểm kiểm tra | Đạt khi | Nếu không đạt |
 |---|---|---|---|
 | 1 | **Gói / chính sách** (kiểm đầu tiên) | Mã gói trong "Chính sách đã chụp" khớp khóa học thực tế (ghi chú) và giá trị HĐ. Lỗi hay gặp: ghi chú học A1 nhưng chọn gói lộ trình trọn gói ĐT.TG → phải là gói tiếng Đức A1 | Trả lại – "Chọn lại gói chính sách" |
-| 2 | Giá & ưu đãi/học bổng | Giá khớp chính sách phiên bản đã chụp; mã ưu đãi đúng gói, còn hạn tại ngày tạo HĐ, có văn bản căn cứ; không cộng dồn trái quy định | Trả lại – "Sửa chính sách/ưu đãi", dẫn mã/văn bản |
+| 2 | Giá & ưu đãi/học bổng | Giá khớp chính sách phiên bản đã chụp; mã ưu đãi đúng gói, còn hạn tại ngày tạo HĐ, có văn bản căn cứ; **không cộng dồn** – mỗi HĐ tối đa 1 ưu đãi (chốt 26/11/2026) | Trả lại – "Sửa chính sách/ưu đãi", dẫn mã/văn bản |
 | 3 | Lộ trình thanh toán | Số đợt, hạn, số tiền khớp chính sách; tổng khớp giá trị HĐ | Trả lại (Admin TS lập phụ lục) |
 | 4 | Thông tin học viên | Họ tên, ngày sinh, CCCD (số, ngày cấp, nơi cấp), địa chỉ… khớp ảnh CCCD | Trả lại – nêu trường sai |
 | 5 | Phụ huynh / đại diện | **HV chưa đủ 18 tuổi → có thông tin phụ huynh khớp CCCD phụ huynh**; phụ huynh ký → đủ 4 ảnh căn cước | Trả lại – nêu trường thiếu |
