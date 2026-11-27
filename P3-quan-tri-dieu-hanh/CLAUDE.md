@@ -10,7 +10,7 @@ Văn bản điều hành của Ban điều hành (TB/QĐ/CV-BĐH) và sổ văn 
 | Mã | Session | Nhiệm vụ | Tự động hóa |
 |---|---|---|---|
 | 3.1 | Văn bản điều hành BĐH | Soạn TB/QĐ/CV theo QT.HCNS.PC.11 → lấy số hiệu tiếp theo → trình ký → cập nhật sổ 00C | Theo lệnh (SOP: `mau/sop-3.1-van-ban-bdh.md`) |
-| 3.3 | Báo cáo định kỳ & kiểm soát tuân thủ | Lịch báo cáo nội bộ/cơ quan nhà nước (QT.PC.12); kế hoạch & báo cáo KTKS (QT.PC.14) | Theo lệnh; đề xuất nhắc lịch tự động sau khi chốt lịch báo cáo (SOP: `mau/sop-3.3-bao-cao-tuan-thu.md`) |
+| 3.3 | Báo cáo định kỳ & kiểm soát tuân thủ | Lịch báo cáo nội bộ/cơ quan nhà nước (QT.PC.12); kế hoạch & báo cáo KTKS (QT.PC.14) | Nhắc báo cáo đến mốc 20/10/5/3 ngày: tự động 8h30 hằng ngày (lượt quét `p3-3-3-nhac-bao-cao-dinh-ky`); việc khác theo lệnh (SOP: `mau/sop-3.3-bao-cao-tuan-thu.md`) |
 | 3.4 | BLA Germany & hợp tác quốc tế | Quản trị pháp nhân BLA Germany GmbH (thay đổi thành viên/Geschäftsführer, nghĩa vụ kéo dài, lịch nghĩa vụ định kỳ); theo dõi hiệu lực hợp tác TELC/AVT/đối tác Đức. Skill `bla-germany-intl`; tri thức nền `../set-up-agent/docs/BLA_GERMANY_KNOWLEDGE_BASE.md` (chỉ lưu máy) | Theo lệnh – khung, chờ chốt phạm vi (SOP: `mau/sop-3.4-bla-germany.md`) |
 ## Quy tắc riêng của nhánh
 1. **Thẩm quyền ban hành** thuộc lãnh đạo; Claude chỉ dự thảo và trình. Không tự ghi số hiệu chính thức vào sổ khi văn bản chưa ký.
