@@ -152,6 +152,7 @@ Todolist: `[1.2] Đã gửi TB review [sau thử việc | tái ký] – [Họ t�
    - T trống và quá hạn nộp (cột P) → Z = `2. Quá hạn review`, ghi Todolist nhắc HCNS.
    - T = `Gia hạn review` / `Chờ kết quả` → giữ nguyên.
 2. Luôn đọc cột Y (ghi chú PC) trước khi làm; Y mâu thuẫn với U/V/X → hỏi PC, không tự đoán.
+3. U = `Khác (xem ghi chú)` → làm đúng theo Y. Trường hợp đã gặp (27/11/2026): **chuyển sang vị trí mới bằng HĐ thử việc** → làm HĐTV theo SOP 1.1 mục 3–4 (mẫu theo pháp nhân của phòng ban mới, thư mục `[Họ tên] - [Vị trí mới]` trong phòng ban mới, lương thử việc theo Y/V, thời hạn theo X), **không** CKBM; HĐ điện tử loại `Thử việc`; Todolist nhắc HCNS đổi phòng ban/vị trí trên HRM và lưu ý pháp lý (thời gian thử việc tối đa theo Điều 25 BLLĐ 2019 – 2 tháng dương lịch có thể vượt 60 ngày; thử việc với người đang là NLĐ – chưa xác minh).
 
 ## 6. Tạo HĐ mới (như 1.1, không có CKBM)
 1. Pháp nhân, thư mục: như mục 3 SOP 1.1. Mẫu: XĐTH hoặc KXĐTH theo cột U (hoặc R nếu U = "Theo đề xuất"). **U/R là HĐDV → làm theo mục 6c**, không dùng mục này.
