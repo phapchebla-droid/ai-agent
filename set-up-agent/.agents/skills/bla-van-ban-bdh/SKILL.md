@@ -41,7 +41,10 @@ SOP và skill mâu thuẫn → theo SOP, rồi sửa skill cho khớp.
    - `scripts/build-reqs.ps1 -paras <json> -at <chỉ số chèn> -out <reqs.json> [-pre <các lệnh xóa.json>]` → sinh lệnh chèn + định dạng Times New Roman 12, căn đều, bullet.
    - Bảng: `scripts/build-tables.ps1 -doc <read_doc đã lưu> -spec <tables.json> -out <reqs.json>`; spec `[{"anchor":"tiêu đề đoạn neo","rows":[["Tiêu đề 1","Tiêu đề 2"],["…","…"]]}]` – bảng chèn sau đoạn neo, hàng 1 in đậm căn giữa.
    - Kết quả `read_doc` lớn được lưu ra file → đọc bằng PowerShell `ConvertFrom-Json` (máy không có Python). Xóa từ dưới lên. Sửa câu chữ lẻ dùng `replaceAllText`.
-   - PowerShell 5.1 không phân biệt hoa thường tên biến (`$p` = `$P`) → đặt tên biến khác hẳn nhau.
+   - PowerShell 5.1 không phân biệt hoa thường tên biến (`$p` = `$P`) → đặt tên biến khác hẳn nhau. Chạy script bằng `powershell -NoProfile -ExecutionPolicy Bypass -File …` (máy chặn chạy script).
+   - Không xóa được trọn đoạn nằm ngay trước một bảng (lỗi "Invalid deletion range") → chừa lại ký tự xuống dòng cuối (xóa đến end−1).
+   - Xóa tab thừa (VD tab Phụ lục của văn bản gốc) bằng `{"deleteTab":{"tabId":"t.xxx"}}`; `replaceAllText` nên kèm `tabsCriteria`.
+   - QĐ sửa đổi, bổ sung: chép QĐ gốc làm khung (giữ người ký), căn cứ thêm QĐ gốc, điều cuối ghi "là bộ phận không tách rời của QĐ số …; nội dung khác giữ nguyên", có điều khoản chuyển tiếp cho hợp đồng đã ký.
 
 ## 3. Đăng HRM (Claude in Chrome, phiên đăng nhập của người dùng)
 Chi tiết JS: `scripts/hrm-snippets.md`. Tóm tắt:
