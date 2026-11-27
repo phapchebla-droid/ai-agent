@@ -98,4 +98,5 @@ Hợp đồng sau khi tạo phải được lưu trữ đúng thư mục tại:
 - Soạn thảo Quyết định khen thưởng (thưởng nóng tuyển sinh, thưởng đóng góp).
 - Soạn thảo Quyết định chấm dứt HĐLĐ / không tái ký đúng thời hiệu và trình tự quy định.
   - NLĐ xin nghỉ việc → QĐ chấm dứt HĐLĐ: SOP `P1-hcns-hdld/mau/sop-qd-cham-dut-nld-xin-nghi.md` (mẫu trống Google Doc `1pJQquy_cUi9TcBBganyb6457zVjlvHcTNpGx8-tvcIg`; ngày QĐ luôn trước ngày bắt đầu nghỉ; số CCCD để trống; PC gửi bản cứng).
+  - NLĐ nghỉ nhưng xin duy trì đóng BHXH (tự chịu 100%, có thể kèm duy trì bảo lãnh thị thực cho NLĐ nước ngoài) → Đơn đề xuất: SOP `P1-hcns-hdld/mau/sop-don-de-xuat-duy-tri-bhxh.md` (mẫu trống Google Doc `1C-0kpsBCSBdfDSh-IGyrSRafJHxgWkcz3aJ0lRj82Vo`).
 - Hỗ trợ tổng hợp dữ liệu làm Báo cáo định kỳ tình hình sử dụng lao động và Báo cáo tham gia Bảo hiểm thất nghiệp (BHTN) theo quy định của Sở LĐ-TB&XH.
