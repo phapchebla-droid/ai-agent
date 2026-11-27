@@ -97,4 +97,5 @@ Hợp đồng sau khi tạo phải được lưu trữ đúng thư mục tại:
 ## 5. Quyết định nhân sự & Báo cáo Nhà nước
 - Soạn thảo Quyết định khen thưởng (thưởng nóng tuyển sinh, thưởng đóng góp).
 - Soạn thảo Quyết định chấm dứt HĐLĐ / không tái ký đúng thời hiệu và trình tự quy định.
+  - NLĐ xin nghỉ việc → QĐ chấm dứt HĐLĐ: SOP `P1-hcns-hdld/mau/sop-qd-cham-dut-nld-xin-nghi.md` (mẫu trống Google Doc `1pJQquy_cUi9TcBBganyb6457zVjlvHcTNpGx8-tvcIg`; ngày QĐ luôn trước ngày bắt đầu nghỉ; số CCCD để trống; PC gửi bản cứng).
 - Hỗ trợ tổng hợp dữ liệu làm Báo cáo định kỳ tình hình sử dụng lao động và Báo cáo tham gia Bảo hiểm thất nghiệp (BHTN) theo quy định của Sở LĐ-TB&XH.
