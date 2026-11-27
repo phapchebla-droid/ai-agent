@@ -47,6 +47,9 @@ Mới → Chờ xác thực (Admin TS) → **Chờ phê duyệt / Chờ pháp ch
 Khảo sát 25/11/2026 (chỉ đọc):
 - Tab Việc cần xử lý: Chờ xác thực `/ctr/work-queue/verify` · Chờ pháp chế rà `/legal` · Pháp chế trả lại `/legal-fix` · Chờ hiệu lực · Chưa gắn tài khoản.
 - Chi tiết HĐ mở tab mới `/sascontracts/{id}`. Các mục thu gọn (Chính sách đã chụp, Xác thực/duyệt/phụ lục, Thông tin phụ huynh, Ảnh căn cước, Lịch sử) đọc được bằng `read_page`/`find` mà không cần bấm.
-- Nút trên hàng đợi pháp chế: **In**, **Đã rà**, **Trả lại** (ghi chú bắt buộc). Vị trí ô ghi chú: *bổ sung khi chạy thử lần đầu* (lúc khảo sát hàng đợi trống).
+- Nút trên từng dòng hàng đợi pháp chế (chạy thử 27/11/2026): **In** (`/ctr/contracts/{id}/print`), **Đã rà** (form POST `/ctr/contracts/{id}/legal-review`, không có hộp thoại xác nhận; xong hiện popup xanh "Thành công – Đã duyệt hợp đồng …", bấm "Đóng"), **Trả lại** (mở ô "Chỗ cần sửa" + nút "Trả lại Admin tuyển sinh"). Trang chi tiết HĐ cũng có nút "Duyệt hợp đồng" / "Trả lại Admin tuyển sinh".
+- Đọc toàn văn HĐ: bản in `print?format=docx` – đọc ngay trong trình duyệt bằng script giải nén docx (không tải file về máy); PDF xem trước nhúng trong trang.
+- Ảnh CCCD: `/ctr/contracts/{id}/id-cards/student.front|back` (và `parent.*`); di chuột ra khỏi ảnh trước khi chụp để con trỏ không che số.
+- Văn bản ưu đãi tháng: link "Theo văn bản" trong Khuyến mại (bài HRM tin tức); có thể có văn bản bổ sung cùng tháng.
 - Danh sách HĐ phân trang 30 dòng; lọc theo Trạng thái, Pháp nhân, Kiểu HĐ.
-*(Còn bổ sung sau lần chạy thử: vị trí ô ghi chú khi Trả lại, hộp thoại xác nhận nếu có.)*
+*(Chạy thử 1 – 27/11/2026: 1 HĐ, đề xuất Đã rà, người dùng xác nhận, bấm thành công. Còn chờ: người dùng xác nhận chạy thử đạt để chuyển sang tự bấm; chốt quà tặng kèm có tính cộng dồn không; chưa thử thao tác Trả lại.)*
