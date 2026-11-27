@@ -70,4 +70,4 @@ Kỹ thuật điền Google Docs (đã kiểm chứng qua 3 lần chạy thử):
 
 - Mỗi việc làm xong → 1 dòng Todolist (tab theo sheetId `1882124751`), trạng thái `AI đã làm - chờ kiểm tra`; lượt không có gì mới chỉ ghi nhật ký.
 - **Không** gõ số CCCD/hộ chiếu, MST, số sổ BHXH, số tài khoản ngân hàng (để trống, nhắc HCNS); **không** xóa nhân sự/hồ sơ/tin; dữ liệu nhân sự, lương là mật – không ghi vào URL; HRM và Sheet lệch thì báo, không tự sửa.
-- Đã biết: HRM chưa lưu "Lương đóng BHXH" trên HĐ điện tử (hiện 0) → nhắc HCNS kiểm tra; tài khoản chưa có quyền "Tạo mới lương" → ghi Todolist cho HCNS.
+- Đã biết: HRM chưa lưu "Lương đóng BHXH" trên HĐ điện tử (hiện 0) → nhắc HCNS kiểm tra; "Tạo mới lương" đã có quyền (27/11/2026) → AI tự tạo (SOP 1.1 mục 6a). Kết quả review "Khác – chuyển vị trí bằng HĐ thử việc" → SOP 1.2 mục 5.3 (thử việc 60 ngày, tự đổi phòng ban, gộp hồ sơ soạn thảo).

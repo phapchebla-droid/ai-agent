@@ -50,7 +50,7 @@ Không cần hỏi từng lần, **chỉ trong phạm vi SOP**: thêm/cập nh�
 4. **HRM – Tạo mới HĐ**: Mã HĐ = số HĐ; Ngày ký = Ngày bắt đầu; `Chờ ký / Chờ duyệt`; Loại/Thời hạn theo mục 3; Link scan = Google Doc HĐ; Ghi chú "AI tạo tự động (luồng 1.1)… Pháp nhân… Thư mục…".
    - **Bắt buộc gán thẳng ô lương ẩn** (`salary_basic`, `salary_kpi`, `allowance_total`, `salary_insurance`, `salary_official`, `salary_probation`) ngay trước khi bấm "Thêm mới" – ô hiển thị không tự đồng bộ. HĐTV: basic = official = lương chính thức, insurance = mức BH, probation = lương thử việc. HĐDV: basic = official = phí/giờ, còn lại 0.
    - Tạo xong mở `/hrm-working-contract/<id>` kiểm tra; "Lương đóng BHXH" có thể vẫn 0 → ghi Todolist.
-5. **HRM – Lương**: tài khoản hiện **chưa có quyền** → không thử lại nhiều lần; ghi Todolist số liệu để HCNS tạo.
+5. **HRM – Lương**: đã có quyền (27/11/2026) → AI tự "Tạo mới lương" theo SOP mục 6a (cơ bản = lương thử việc, KPI 0, BH = mức BH, phụ cấp 0, hiệu lực = ngày bắt đầu). Bị báo không có quyền → ghi Todolist số liệu để HCNS tạo.
 6. **Báo cáo**: Todolist (Sheet `1pZZVTGRzqW6Txwb2Y2GgtJdL_KUwuLdJMDRk0ge2Iso`, tab theo **sheetId `1882124751`** – tên tab có thể đổi; đọc lại dòng trống cuối ngay trước khi ghi vì luồng 1.2 cũng ghi) – trạng thái `AI đã làm - chờ kiểm tra`, mô tả `[1.1] … – [Họ tên] – [Phòng] – Mã NV – [link thư mục]` + cảnh báo + "Cần HCNS điền: số CCCD, STK ngân hàng". Cập nhật file theo dõi và `nhat-ky/YYYY-MM-DD.md`.
 
 ## 5. Kỹ thuật hay vấp (chi tiết ở SOP mục 6a)

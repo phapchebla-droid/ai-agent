@@ -152,7 +152,11 @@ Todolist: `[1.2] Đã gửi TB review [sau thử việc | tái ký] – [Họ t�
    - T trống và quá hạn nộp (cột P) → Z = `2. Quá hạn review`, ghi Todolist nhắc HCNS.
    - T = `Gia hạn review` / `Chờ kết quả` → giữ nguyên.
 2. Luôn đọc cột Y (ghi chú PC) trước khi làm; Y mâu thuẫn với U/V/X → hỏi PC, không tự đoán.
-3. U = `Khác (xem ghi chú)` → làm đúng theo Y. Trường hợp đã gặp (27/11/2026): **chuyển sang vị trí mới bằng HĐ thử việc** → làm HĐTV theo SOP 1.1 mục 3–4 (mẫu theo pháp nhân của phòng ban mới, thư mục `[Họ tên] - [Vị trí mới]` trong phòng ban mới, lương thử việc theo Y/V, thời hạn theo X), **không** CKBM; HĐ điện tử loại `Thử việc`; Todolist nhắc HCNS đổi phòng ban/vị trí trên HRM và lưu ý pháp lý (thời gian thử việc tối đa theo Điều 25 BLLĐ 2019 – 2 tháng dương lịch có thể vượt 60 ngày; thử việc với người đang là NLĐ – chưa xác minh).
+3. U = `Khác (xem ghi chú)` → làm đúng theo Y. Trường hợp đã gặp (27/11/2026): **chuyển sang vị trí mới bằng HĐ thử việc** → làm HĐTV theo SOP 1.1 mục 3–4 (mẫu theo pháp nhân của phòng ban mới, thư mục `[Họ tên] - [Vị trí mới]` trong phòng ban mới, lương thử việc theo Y/V, thời hạn theo X), **không** CKBM; HĐ điện tử loại `Thử việc`.
+   - **Thời gian thử việc ghi "60 ngày"** (PC chốt 27/11/2026): bắt đầu + 59 ngày (VD 01/12/2026–29/01/2027); không ghi "02 tháng" vì 2 tháng dương lịch có thể vượt 60 ngày (Điều 25 BLLĐ 2019 – chưa xác minh). HRM chọn "2 tháng" rồi sửa tay ngày kết thúc.
+   - **AI tự làm trên HRM** (PC chốt 27/11/2026): "Cập nhật phòng ban" trên dòng nhân sự → phòng mới; "Cập nhật Vị trí/Cấp bậc" nếu phòng mới đã khai báo vị trí (`/get-position-by-department/<id>`; BLA_Tech hiện chưa có vị trí nào → ghi Todolist cho HCNS); tạo Lương (SOP 1.1 mục 6a).
+   - **Gộp hồ sơ soạn thảo về một chỗ**: chuyển các file soạn cũ của nhân sự (HĐ, CKBM nằm ở phòng ban cũ trong `01. Bản soạn thảo`) vào thư mục mới. Drive connector không di chuyển được file cũ → làm trên giao diện Drive bằng Claude in Chrome: chọn file → nút Di chuyển → chọn thư mục → Move → xác nhận "Change who has access". Bản scan đã ký ở thư mục lưu trữ khác (VD `04. Ban Trợ lý`) giữ nguyên.
+   - Todolist ghi lưu ý: thử việc với người đang là NLĐ của Công ty – chưa xác minh.
 
 ## 6. Tạo HĐ mới (như 1.1, không có CKBM)
 1. Pháp nhân, thư mục: như mục 3 SOP 1.1. Mẫu: XĐTH hoặc KXĐTH theo cột U (hoặc R nếu U = "Theo đề xuất"). **U/R là HĐDV → làm theo mục 6c**, không dùng mục này.
@@ -182,7 +186,7 @@ Todolist: `[1.2] Đã gửi TB review [sau thử việc | tái ký] – [Họ t�
 4. HRM → Tạo mới HĐ: danh sách nhân sự (`/hrm/employees?status=active&page=N`, tìm dòng có mã NV – **không lọc bằng SĐT trên URL**) → link "Tạo mới HĐ" trên dòng đó → hộp "Thêm mới HĐ nhân viên …" (form `hrm-working-contract-store`).
    - Mã HĐ = số HĐ mới; Ngày ký = Ngày bắt đầu = ngày bắt đầu HĐ mới; Trạng thái `Chờ ký / Chờ duyệt`; Loại = `Chính thức`; Thời hạn `12`/`24`/`0` (không xác định) → ngày kết thúc tự tính; Link scan = Google Doc; Ghi chú "AI tạo tự động (luồng 1.2) … Pháp nhân … Thư mục …".
    - Lương: Lương cơ bản = mức BH · Lương KPI = lương hiệu quả · Phụ cấp = 0 · Lương đóng BH = mức BH → Tổng thu nhập chính thức tự cộng. **Các ô hiển thị không tự đồng bộ sang ô ẩn** (`salary_basic`, `salary_kpi`, `allowance_total`, `salary_insurance`, `salary_official`, `salary_probation`) → gán trực tiếp giá trị số (không dấu chấm) cho ô ẩn trước khi bấm "Thêm mới".
-   - Sau khi tạo: mở `/hrm-working-contract/<id>` kiểm tra. **"Lương đóng BHXH" hiện 0 dù đã gửi** (HRM chưa nhận trường này) → ghi Todolist nhờ HCNS kiểm tra. Mục "Lương" (Tạo mới lương) tài khoản chưa có quyền → ghi Todolist như 1.1.
+   - Sau khi tạo: mở `/hrm-working-contract/<id>` kiểm tra. **"Lương đóng BHXH" hiện 0 dù đã gửi** (HRM chưa nhận trường này) → ghi Todolist nhờ HCNS kiểm tra. Tạo mới lương: AI làm luôn theo SOP 1.1 mục 6a (đã có quyền từ 27/11/2026) – cơ bản = tổng thu nhập mới (HĐTV: lương thử việc), KPI 0, BH = mức BH, phụ cấp 0, hiệu lực = ngày bắt đầu HĐ mới.
 5. Sheet: AA = link thư mục, Z = `3. AI đã làm HĐ – chờ kiểm tra`. Todolist: `[1.2] HĐLĐ … – [Họ tên] – [Phòng] – Mã NV – [link]`.
 6. PC kiểm tra xong tự chuyển Z = `5. Hoàn tất`.
 
