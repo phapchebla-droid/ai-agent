@@ -12,7 +12,7 @@ Trạng thái: **KHUNG – chờ chạy thử** (tạo 21/11/2026). Căn cứ n�
 
 **Nhắc lịch (người dùng chốt 25/11/2026):** mốc **20, 10, 5, 3 ngày** trước hạn.
 - Google Calendar của phapche.bla@gmail.com: sự kiện cả ngày, lặp hằng năm/quý, tiêu đề `[BC định kỳ] <mã> …`. Báo cáo **lao động (LĐ-xx) mời thêm hr@bla.vn**; còn lại chỉ phapche.
-- Todolist Pháp chế (Sheet `1pZZVTGRzqW6Txwb2Y2GgtJdL_KUwuLdJMDRk0ge2Iso`, tab nhật ký đang dùng): thêm dòng ngắn `[Nhắc BC] Còn N ngày (hạn dd/mm): …` – cột B ngày nhắc, C nội dung, D "High", E "Not Started". Ghi bằng `update_values` vào đúng hàng trống kế tiếp (không dùng `append_values`: bảng bị nhận diện ở cột E nên dữ liệu bị lệch cột). Mỗi lần thêm nhắc cho ~2 tháng tới.
+- Todolist Pháp chế (Sheet `1pZZVTGRzqW6Txwb2Y2GgtJdL_KUwuLdJMDRk0ge2Iso`, tab nhật ký đang dùng): thêm dòng ngắn `[Nhắc BC] Còn N ngày (hạn dd/mm): …` – cột B ngày nhắc, C nội dung, D "High", E "Not Started". Ghi bằng `update_values` vào đúng hàng trống kế tiếp (không dùng `append_values`: bảng bị nhận diện ở cột E nên dữ liệu bị lệch cột). **Chỉ ghi nhắc vào đúng ngày đến mốc** (người dùng chốt 27/11/2026): mỗi sáng đọc tab `Năm YYYY`, báo cáo nào hôm nay còn đúng 20/10/5/3 ngày (theo hạn sớm hơn giữa cột E và F, bỏ dòng "Đã nộp"/"Không áp dụng") thì ghi 1 dòng; **không ghi trước** nhắc cho các ngày tương lai.
 
 **LĐ-01 Báo cáo tình hình sử dụng lao động (làm lần đầu 26/11/2026):**
 - Hà Nội nộp qua Cổng việc làm `congvieclam.hanoi.gov.vn` (mỗi MST 1 tài khoản, người dùng tự đăng nhập/nộp). Lập **riêng BLA và BLA Academy**. Đính kèm PDF bản ký, đóng dấu; ≥10 NLĐ thì Import Excel theo mẫu tải từ cổng.
