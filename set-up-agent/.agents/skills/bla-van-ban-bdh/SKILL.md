@@ -46,6 +46,10 @@ SOP và skill mâu thuẫn → theo SOP, rồi sửa skill cho khớp.
    - Xóa tab thừa (VD tab Phụ lục của văn bản gốc) bằng `{"deleteTab":{"tabId":"t.xxx"}}`; `replaceAllText` nên kèm `tabsCriteria`.
    - QĐ sửa đổi, bổ sung: chép QĐ gốc làm khung (giữ người ký), căn cứ thêm QĐ gốc, điều cuối ghi "là bộ phận không tách rời của QĐ số …; nội dung khác giữ nguyên", có điều khoản chuyển tiếp cho hợp đồng đã ký.
 
+### 2a. Ảnh truyền thông cho TB quan trọng (người dùng yêu cầu 28/11/2026)
+- Dựng poster HTML 1080×1350 trong `P3-quan-tri-dieu-hanh/dau-ra/<tên>/` (font Be Vietnam Pro, màu BLA đen – đỏ – vàng, logo `https://tiengduc.bla.vn/images/logo-bla.png`): tiêu đề lớn, ngày áp dụng, 2–3 ý chính, bảng/lịch trực quan, chân trang "Chi tiết: Thông báo số …".
+- Xuất PNG: `chrome.exe --headless=new --hide-scrollbars --force-device-scale-factor=1 --window-size=1080,1350 --virtual-time-budget=6000 --screenshot=<png> file:///<html>` → mở ảnh kiểm tra tràn chữ → gửi người dùng. Khi đăng HRM dùng ảnh này làm ảnh bìa thay logo và chèn vào đầu nội dung; điền số TB vào chân ảnh sau khi có số.
+
 ## 3. Đăng HRM (Claude in Chrome, phiên đăng nhập của người dùng)
 Chi tiết JS: `scripts/hrm-snippets.md`. Tóm tắt:
 1. **Tải bản scan lên HRM** (không gắn link Drive – nhân sự không có quyền xem): `download_file_content` → chép PDF vào `P3-quan-tri-dieu-hanh/dau-ra/hrm-scan/<số>-2026-TB-BDH.pdf` (công cụ tải lên của Chrome chỉ đọc thư mục làm việc; `dau-ra/` không đẩy GitHub) → chèn tạm `<input type=file>` vào trang → `file_upload` → POST tới `/ckeditor/upload` → lấy `url` `/upload/YYYY/MM/DD/….pdf`. Chỉ khi cách này hỏng mới hỏi người dùng có mở công khai link Drive không.
